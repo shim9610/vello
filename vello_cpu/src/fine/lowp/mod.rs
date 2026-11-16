@@ -341,6 +341,7 @@ fn pack_block<S: Simd>(simd: S, scratch: &[u8], width: usize, region: &mut Regio
         .as_chunks::<CHUNK_LENGTH>()
         .0
     {
+        // Byte-backed scratch storage does not guarantee u32 alignment.
         let casted = pod_read_unaligned::<[u32; 16]>(col);
 
         let [loaded_1, loaded_2, loaded_3, loaded_4] = simd
@@ -427,6 +428,7 @@ fn unpack_block<S: Simd>(simd: S, region: &mut Region<'_>, width: usize, scratch
         let r1 = f32x4::from_bytes(u8x16::from_slice(simd, src1));
         let r2 = f32x4::from_bytes(u8x16::from_slice(simd, src2));
         let r3 = f32x4::from_bytes(u8x16::from_slice(simd, src3));
+        // The destination may be unaligned; only the local array needs f32 alignment.
         let mut packed = [0.0_f32; 16];
         simd.store_four_interleaved_f32x4([r0, r1, r2, r3], &mut packed);
         col.copy_from_slice(bytes_of(&packed));
