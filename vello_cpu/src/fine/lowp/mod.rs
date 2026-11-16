@@ -21,7 +21,7 @@ use crate::peniko::BlendMode;
 use crate::region::Region;
 use crate::util::NormalizedMulExt;
 use crate::util::scalar::div_255;
-use bytemuck::{cast_slice, cast_slice_mut};
+use bytemuck::{bytes_of, cast_slice, pod_read_unaligned};
 use core::iter;
 use fearless_simd_macros::simd;
 use vello_common::encode::{EncodedGradient, EncodedImage};
@@ -68,10 +68,18 @@ impl<S: Simd> FineKernel<S> for U8Kernel {
     /// Fills a buffer with a solid color using SIMD operations.
     ///
     /// Efficiently broadcasts a single RGBA color across all pixels in the destination.
+    ///
+    /// # Panics
+    ///
+    /// Panics if the destination length is not a multiple of four.
     #[simd]
     fn copy_solid(simd: S, dest: &mut [Self::Numeric], src: [Self::Numeric; 4]) {
-        let target: &mut [u32] = cast_slice_mut(dest);
-        target.fill(u32::from_ne_bytes(src));
+        let (pixels, remainder) = dest.as_chunks_mut::<4>();
+        assert!(
+            remainder.is_empty(),
+            "RGBA buffer length must be divisible by four"
+        );
+        pixels.fill(src);
     }
 
     /// Creates a painter for rendering gradients in u8 precision.
@@ -337,10 +345,11 @@ fn pack_block<S: Simd>(simd: S, scratch: &[u8], width: usize, region: &mut Regio
         .as_chunks::<CHUNK_LENGTH>()
         .0
     {
-        let casted: &[u32; 16] = cast_slice::<u8, u32>(col).try_into().unwrap();
+        // Byte-backed scratch storage does not guarantee u32 alignment.
+        let casted = pod_read_unaligned::<[u32; 16]>(col);
 
         let [loaded_1, loaded_2, loaded_3, loaded_4] = simd
-            .load_four_interleaved_u32x4(casted)
+            .load_four_interleaved_u32x4(&casted)
             .map(u32x4::to_bytes);
 
         let (dest0, rest0) = row0.split_at_mut(Tile::WIDTH as usize * COLOR_COMPONENTS);
@@ -400,8 +409,8 @@ fn unpack<S: Simd>(simd: S, region: &mut Region<'_>, width: usize, scratch: &mut
 
 #[inline(always)]
 fn unpack_block<S: Simd>(simd: S, region: &mut Region<'_>, width: usize, scratch: &mut [u8]) {
-    let scratch: &mut [f32] = cast_slice_mut(&mut scratch[..width * TILE_HEIGHT_COMPONENTS]);
-    const CHUNK_LENGTH: usize = 16;
+    let scratch = &mut scratch[..width * TILE_HEIGHT_COMPONENTS];
+    const CHUNK_LENGTH: usize = Tile::WIDTH as usize * TILE_HEIGHT_COMPONENTS;
 
     let [row0, row1, row2, row3] = region.areas();
     let row_len = width * COLOR_COMPONENTS;
@@ -423,7 +432,10 @@ fn unpack_block<S: Simd>(simd: S, region: &mut Region<'_>, width: usize, scratch
         let r1 = f32x4::from_bytes(u8x16::from_slice(simd, src1));
         let r2 = f32x4::from_bytes(u8x16::from_slice(simd, src2));
         let r3 = f32x4::from_bytes(u8x16::from_slice(simd, src3));
-        simd.store_four_interleaved_f32x4([r0, r1, r2, r3], col);
+        // The destination may be unaligned; only the local array needs f32 alignment.
+        let mut packed = [0.0_f32; 16];
+        simd.store_four_interleaved_f32x4([r0, r1, r2, r3], &mut packed);
+        col.copy_from_slice(bytes_of(&packed));
 
         row0 = rest0;
         row1 = rest1;
@@ -655,6 +667,7 @@ mod tests {
     use super::*;
     use alloc::vec;
     use alloc::vec::Vec;
+    use bytemuck::bytes_of_mut;
     use vello_common::fearless_simd::{Level, dispatch};
     use vello_common::geometry::RectU16;
 
@@ -713,5 +726,69 @@ mod tests {
                 },
             );
         });
+    }
+
+    // Byte buffers require only byte alignment. The kernels must handle them
+    // without panicking, produce the expected bytes, and preserve guard bytes.
+    #[test]
+    fn u8_kernels_accept_unaligned_buffers() {
+        for width in [4_u16, 5] {
+            let len = usize::from(width) * 16;
+            let end = 1 + len;
+            let mut input_words = [0xA5A5_A5A5_u32; 21];
+            let mut output_words = [0xA5A5_A5A5_u32; 21];
+            let mut solid_words = [0xA5A5_A5A5_u32; 21];
+            let input = bytes_of_mut(&mut input_words);
+            let output = bytes_of_mut(&mut output_words);
+            let solid = bytes_of_mut(&mut solid_words);
+
+            // The u32 storage is aligned; advancing one byte guarantees misalignment.
+            assert_ne!(
+                input[1..end].as_ptr().align_offset(4),
+                0,
+                "input must be unaligned: width={width}",
+            );
+            for (i, byte) in input[1..end].iter_mut().enumerate() {
+                *byte = i as u8;
+            }
+
+            let mut expected = Vec::with_capacity(len);
+            for y in 0..4 {
+                for x in 0..usize::from(width) {
+                    let start = 1 + (x * 4 + y) * 4;
+                    expected.extend_from_slice(&input[start..start + 4]);
+                }
+            }
+            let mut pixmap = Pixmap::new(width, 4);
+            dispatch!(Level::try_detect().unwrap_or(Level::baseline()), simd => {
+                {
+                    let mut view = pixmap.as_mut();
+                    let mut region = Region::new(&mut view, RectU16::new(0, 0, width, 4));
+                    U8Kernel::pack(simd, &input[1..end], usize::from(width), &mut region);
+                }
+                assert_eq!(pixmap.data_as_u8_slice(), expected, "pack: width={width}");
+
+                let mut view = pixmap.as_mut();
+                let mut region = Region::new(&mut view, RectU16::new(0, 0, width, 4));
+                U8Kernel::unpack(simd, &mut region, usize::from(width), &mut output[1..end]);
+                U8Kernel::copy_solid(simd, &mut solid[1..end], [1, 2, 3, 255]);
+            });
+            assert_eq!(&output[1..end], &input[1..end], "unpack: width={width}");
+            assert!(
+                solid[1..end]
+                    .as_chunks::<4>()
+                    .0
+                    .iter()
+                    .all(|pixel| *pixel == [1, 2, 3, 255]),
+                "copy_solid: width={width}",
+            );
+            for (name, bytes) in [("input", input), ("output", output), ("solid", solid)] {
+                assert_eq!(bytes[0], 0xA5, "{name} prefix guard: width={width}");
+                assert!(
+                    bytes[end..].iter().all(|&byte| byte == 0xA5),
+                    "{name} suffix guard: width={width}",
+                );
+            }
+        }
     }
 }
