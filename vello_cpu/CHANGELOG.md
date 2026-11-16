@@ -22,7 +22,7 @@ This release has an [MSRV][] of 1.89.
 
 ### Fixed
 
-- Alignment-dependent panics when filling, packing, or unpacking u8 scratch buffers.
+- Alignment-dependent panics when filling, packing, or unpacking u8 scratch buffers. (by [@shim9610][])
 
 ## [0.4.0][] - 2026-11-11
 
@@ -287,6 +287,7 @@ This is the initial release. No changelog was kept for this release.
 
 See also the [vello_common 0.0.1](../vello_common/CHANGELOG.md#001---2025-05-10) release.
 
+[@shim9610]: https://github.com/shim9610
 [@DJMcNab]: https://github.com/DJMcNab
 [@b0nes164]: https://github.com/b0nes164
 [@grebmeg]: https://github.com/grebmeg

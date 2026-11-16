@@ -68,6 +68,10 @@ impl<S: Simd> FineKernel<S> for U8Kernel {
     /// Fills a buffer with a solid color using SIMD operations.
     ///
     /// Efficiently broadcasts a single RGBA color across all pixels in the destination.
+    ///
+    /// # Panics
+    ///
+    /// Panics if the destination length is not a multiple of four.
     #[simd]
     fn copy_solid(simd: S, dest: &mut [Self::Numeric], src: [Self::Numeric; 4]) {
         let (pixels, remainder) = dest.as_chunks_mut::<4>();
@@ -406,7 +410,7 @@ fn unpack<S: Simd>(simd: S, region: &mut Region<'_>, width: usize, scratch: &mut
 #[inline(always)]
 fn unpack_block<S: Simd>(simd: S, region: &mut Region<'_>, width: usize, scratch: &mut [u8]) {
     let scratch = &mut scratch[..width * TILE_HEIGHT_COMPONENTS];
-    const CHUNK_LENGTH: usize = 64;
+    const CHUNK_LENGTH: usize = Tile::WIDTH as usize * TILE_HEIGHT_COMPONENTS;
 
     let [row0, row1, row2, row3] = region.areas();
     let row_len = width * COLOR_COMPONENTS;

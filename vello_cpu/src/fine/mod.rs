@@ -271,10 +271,6 @@ pub trait FineKernel<S: Simd>: Send + Sync + 'static {
     /// Fill the target buffer with a solid color.
     ///
     /// Efficiently replicates the given RGBA color across all pixels in the target buffer.
-    ///
-    /// # Panics
-    ///
-    /// The u8 kernel panics if the target length is not a multiple of four.
     fn copy_solid(simd: S, target: &mut [Self::Numeric], color: [Self::Numeric; 4]);
     /// Create a painter for rendering gradients.
     ///
