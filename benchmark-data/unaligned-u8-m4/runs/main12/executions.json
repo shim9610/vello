@@ -1,0 +1,1730 @@
+[
+  {
+    "pair": 1,
+    "slot": 0,
+    "variant": "original",
+    "baseline": "vello-main12-p01-original",
+    "command": [
+      "<artifact-root>/targets/original/release/deps/main-fab79848fca1e780",
+      "^(fine/pack/pack_block_u8_neon|fine/pack/unpack_block_u8_neon|fine/fill/opaque_short_u8_neon|fine/fill/opaque_long_u8_neon)$",
+      "--bench",
+      "--warm-up-time",
+      "3",
+      "--measurement-time",
+      "10",
+      "--sample-size",
+      "200",
+      "--nresamples",
+      "100000",
+      "--confidence-level",
+      "0.95",
+      "--noplot",
+      "--save-baseline",
+      "vello-main12-p01-original"
+    ],
+    "binary_sha256": "bda38383629c61a70dfea361f627e7c1cc6eff4baaf8ea82529fce59023e47f0",
+    "utc_start": "2026-11-16T16:23:44.735673+00:00",
+    "exit": 0,
+    "seconds": 55.76605920800001,
+    "utc_end": "2026-11-16T16:24:40.502114+00:00",
+    "measurements": {
+      "fine/pack/unpack_block_u8_neon": {
+        "slope_ns": 48.145390653185395,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 48.108294568461694,
+          "upper_bound": 48.18497311263371
+        },
+        "estimates": "<artifact-root>/runs/main12/pair01/original/criterion/fine_pack_unpack_block_u8_neon/vello-main12-p01-original/estimates.json",
+        "sample_size": 200
+      },
+      "fine/pack/pack_block_u8_neon": {
+        "slope_ns": 47.782110489465666,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 47.7514327577885,
+          "upper_bound": 47.813421923790784
+        },
+        "estimates": "<artifact-root>/runs/main12/pair01/original/criterion/fine_pack_pack_block_u8_neon/vello-main12-p01-original/estimates.json",
+        "sample_size": 200
+      },
+      "fine/fill/opaque_long_u8_neon": {
+        "slope_ns": 33.18312828794256,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 33.06484623621708,
+          "upper_bound": 33.31868423115612
+        },
+        "estimates": "<artifact-root>/runs/main12/pair01/original/criterion/fine_fill_opaque_long_u8_neon/vello-main12-p01-original/estimates.json",
+        "sample_size": 200
+      },
+      "fine/fill/opaque_short_u8_neon": {
+        "slope_ns": 6.832060467399198,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 6.823915719025389,
+          "upper_bound": 6.84019219933694
+        },
+        "estimates": "<artifact-root>/runs/main12/pair01/original/criterion/fine_fill_opaque_short_u8_neon/vello-main12-p01-original/estimates.json",
+        "sample_size": 200
+      }
+    },
+    "status": "complete"
+  },
+  {
+    "pair": 1,
+    "slot": 1,
+    "variant": "modified",
+    "baseline": "vello-main12-p01-modified",
+    "command": [
+      "<artifact-root>/targets/modified/release/deps/main-fab79848fca1e780",
+      "^(fine/pack/pack_block_u8_neon|fine/pack/unpack_block_u8_neon|fine/fill/opaque_short_u8_neon|fine/fill/opaque_long_u8_neon)$",
+      "--bench",
+      "--warm-up-time",
+      "3",
+      "--measurement-time",
+      "10",
+      "--sample-size",
+      "200",
+      "--nresamples",
+      "100000",
+      "--confidence-level",
+      "0.95",
+      "--noplot",
+      "--save-baseline",
+      "vello-main12-p01-modified"
+    ],
+    "binary_sha256": "8335b089194621f472cc75c29e3d8d916eac7ee2a6b514678a4b605b43f25fa0",
+    "utc_start": "2026-11-16T16:24:44.317907+00:00",
+    "exit": 0,
+    "seconds": 55.849206042000006,
+    "utc_end": "2026-11-16T16:25:40.167505+00:00",
+    "measurements": {
+      "fine/pack/unpack_block_u8_neon": {
+        "slope_ns": 48.18633079504165,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 48.102402475804354,
+          "upper_bound": 48.281651463528185
+        },
+        "estimates": "<artifact-root>/runs/main12/pair01/modified/criterion/fine_pack_unpack_block_u8_neon/vello-main12-p01-modified/estimates.json",
+        "sample_size": 200
+      },
+      "fine/pack/pack_block_u8_neon": {
+        "slope_ns": 47.35985709398328,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 47.33589567815886,
+          "upper_bound": 47.386510930596295
+        },
+        "estimates": "<artifact-root>/runs/main12/pair01/modified/criterion/fine_pack_pack_block_u8_neon/vello-main12-p01-modified/estimates.json",
+        "sample_size": 200
+      },
+      "fine/fill/opaque_long_u8_neon": {
+        "slope_ns": 33.31204052892431,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 33.24279687084848,
+          "upper_bound": 33.38240812176824
+        },
+        "estimates": "<artifact-root>/runs/main12/pair01/modified/criterion/fine_fill_opaque_long_u8_neon/vello-main12-p01-modified/estimates.json",
+        "sample_size": 200
+      },
+      "fine/fill/opaque_short_u8_neon": {
+        "slope_ns": 6.796567601345512,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 6.775849634506047,
+          "upper_bound": 6.818791933204625
+        },
+        "estimates": "<artifact-root>/runs/main12/pair01/modified/criterion/fine_fill_opaque_short_u8_neon/vello-main12-p01-modified/estimates.json",
+        "sample_size": 200
+      }
+    },
+    "status": "complete"
+  },
+  {
+    "pair": 2,
+    "slot": 0,
+    "variant": "modified",
+    "baseline": "vello-main12-p02-modified",
+    "command": [
+      "<artifact-root>/targets/modified/release/deps/main-fab79848fca1e780",
+      "^(fine/pack/pack_block_u8_neon|fine/pack/unpack_block_u8_neon|fine/fill/opaque_short_u8_neon|fine/fill/opaque_long_u8_neon)$",
+      "--bench",
+      "--warm-up-time",
+      "3",
+      "--measurement-time",
+      "10",
+      "--sample-size",
+      "200",
+      "--nresamples",
+      "100000",
+      "--confidence-level",
+      "0.95",
+      "--noplot",
+      "--save-baseline",
+      "vello-main12-p02-modified"
+    ],
+    "binary_sha256": "8335b089194621f472cc75c29e3d8d916eac7ee2a6b514678a4b605b43f25fa0",
+    "utc_start": "2026-11-16T16:25:43.990657+00:00",
+    "exit": 0,
+    "seconds": 55.979237125,
+    "utc_end": "2026-11-16T16:26:39.970273+00:00",
+    "measurements": {
+      "fine/pack/unpack_block_u8_neon": {
+        "slope_ns": 48.3737925563854,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 48.26273095790595,
+          "upper_bound": 48.49329403444521
+        },
+        "estimates": "<artifact-root>/runs/main12/pair02/modified/criterion/fine_pack_unpack_block_u8_neon/vello-main12-p02-modified/estimates.json",
+        "sample_size": 200
+      },
+      "fine/pack/pack_block_u8_neon": {
+        "slope_ns": 47.374456978961206,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 47.347579746324094,
+          "upper_bound": 47.40313767966975
+        },
+        "estimates": "<artifact-root>/runs/main12/pair02/modified/criterion/fine_pack_pack_block_u8_neon/vello-main12-p02-modified/estimates.json",
+        "sample_size": 200
+      },
+      "fine/fill/opaque_long_u8_neon": {
+        "slope_ns": 33.912800920391206,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 33.777776391983096,
+          "upper_bound": 34.06852884692261
+        },
+        "estimates": "<artifact-root>/runs/main12/pair02/modified/criterion/fine_fill_opaque_long_u8_neon/vello-main12-p02-modified/estimates.json",
+        "sample_size": 200
+      },
+      "fine/fill/opaque_short_u8_neon": {
+        "slope_ns": 6.904595263775659,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 6.889576819901791,
+          "upper_bound": 6.91959057959252
+        },
+        "estimates": "<artifact-root>/runs/main12/pair02/modified/criterion/fine_fill_opaque_short_u8_neon/vello-main12-p02-modified/estimates.json",
+        "sample_size": 200
+      }
+    },
+    "status": "complete"
+  },
+  {
+    "pair": 2,
+    "slot": 1,
+    "variant": "original",
+    "baseline": "vello-main12-p02-original",
+    "command": [
+      "<artifact-root>/targets/original/release/deps/main-fab79848fca1e780",
+      "^(fine/pack/pack_block_u8_neon|fine/pack/unpack_block_u8_neon|fine/fill/opaque_short_u8_neon|fine/fill/opaque_long_u8_neon)$",
+      "--bench",
+      "--warm-up-time",
+      "3",
+      "--measurement-time",
+      "10",
+      "--sample-size",
+      "200",
+      "--nresamples",
+      "100000",
+      "--confidence-level",
+      "0.95",
+      "--noplot",
+      "--save-baseline",
+      "vello-main12-p02-original"
+    ],
+    "binary_sha256": "bda38383629c61a70dfea361f627e7c1cc6eff4baaf8ea82529fce59023e47f0",
+    "utc_start": "2026-11-16T16:26:43.796713+00:00",
+    "exit": 0,
+    "seconds": 55.926749125000015,
+    "utc_end": "2026-11-16T16:27:39.723846+00:00",
+    "measurements": {
+      "fine/pack/unpack_block_u8_neon": {
+        "slope_ns": 48.10637604275715,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 48.07415603767814,
+          "upper_bound": 48.14152235153329
+        },
+        "estimates": "<artifact-root>/runs/main12/pair02/original/criterion/fine_pack_unpack_block_u8_neon/vello-main12-p02-original/estimates.json",
+        "sample_size": 200
+      },
+      "fine/pack/pack_block_u8_neon": {
+        "slope_ns": 47.43243802851729,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 47.40907535627539,
+          "upper_bound": 47.45826343977269
+        },
+        "estimates": "<artifact-root>/runs/main12/pair02/original/criterion/fine_pack_pack_block_u8_neon/vello-main12-p02-original/estimates.json",
+        "sample_size": 200
+      },
+      "fine/fill/opaque_long_u8_neon": {
+        "slope_ns": 33.825483562462146,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 33.73889102865551,
+          "upper_bound": 33.915258026375234
+        },
+        "estimates": "<artifact-root>/runs/main12/pair02/original/criterion/fine_fill_opaque_long_u8_neon/vello-main12-p02-original/estimates.json",
+        "sample_size": 200
+      },
+      "fine/fill/opaque_short_u8_neon": {
+        "slope_ns": 6.962151437067395,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 6.95697943194115,
+          "upper_bound": 6.967429827797887
+        },
+        "estimates": "<artifact-root>/runs/main12/pair02/original/criterion/fine_fill_opaque_short_u8_neon/vello-main12-p02-original/estimates.json",
+        "sample_size": 200
+      }
+    },
+    "status": "complete"
+  },
+  {
+    "pair": 3,
+    "slot": 0,
+    "variant": "original",
+    "baseline": "vello-main12-p03-original",
+    "command": [
+      "<artifact-root>/targets/original/release/deps/main-fab79848fca1e780",
+      "^(fine/pack/pack_block_u8_neon|fine/pack/unpack_block_u8_neon|fine/fill/opaque_short_u8_neon|fine/fill/opaque_long_u8_neon)$",
+      "--bench",
+      "--warm-up-time",
+      "3",
+      "--measurement-time",
+      "10",
+      "--sample-size",
+      "200",
+      "--nresamples",
+      "100000",
+      "--confidence-level",
+      "0.95",
+      "--noplot",
+      "--save-baseline",
+      "vello-main12-p03-original"
+    ],
+    "binary_sha256": "bda38383629c61a70dfea361f627e7c1cc6eff4baaf8ea82529fce59023e47f0",
+    "utc_start": "2026-11-16T16:27:43.541143+00:00",
+    "exit": 0,
+    "seconds": 55.86430058299999,
+    "utc_end": "2026-11-16T16:28:39.405827+00:00",
+    "measurements": {
+      "fine/pack/unpack_block_u8_neon": {
+        "slope_ns": 48.09387920653464,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 48.06303739117547,
+          "upper_bound": 48.12708243436006
+        },
+        "estimates": "<artifact-root>/runs/main12/pair03/original/criterion/fine_pack_unpack_block_u8_neon/vello-main12-p03-original/estimates.json",
+        "sample_size": 200
+      },
+      "fine/pack/pack_block_u8_neon": {
+        "slope_ns": 47.42548127467316,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 47.40041907042976,
+          "upper_bound": 47.45343555040085
+        },
+        "estimates": "<artifact-root>/runs/main12/pair03/original/criterion/fine_pack_pack_block_u8_neon/vello-main12-p03-original/estimates.json",
+        "sample_size": 200
+      },
+      "fine/fill/opaque_long_u8_neon": {
+        "slope_ns": 33.82917680392821,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 33.73224458277481,
+          "upper_bound": 33.933398966177116
+        },
+        "estimates": "<artifact-root>/runs/main12/pair03/original/criterion/fine_fill_opaque_long_u8_neon/vello-main12-p03-original/estimates.json",
+        "sample_size": 200
+      },
+      "fine/fill/opaque_short_u8_neon": {
+        "slope_ns": 6.949912623457133,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 6.944691330797807,
+          "upper_bound": 6.955264209051477
+        },
+        "estimates": "<artifact-root>/runs/main12/pair03/original/criterion/fine_fill_opaque_short_u8_neon/vello-main12-p03-original/estimates.json",
+        "sample_size": 200
+      }
+    },
+    "status": "complete"
+  },
+  {
+    "pair": 3,
+    "slot": 1,
+    "variant": "modified",
+    "baseline": "vello-main12-p03-modified",
+    "command": [
+      "<artifact-root>/targets/modified/release/deps/main-fab79848fca1e780",
+      "^(fine/pack/pack_block_u8_neon|fine/pack/unpack_block_u8_neon|fine/fill/opaque_short_u8_neon|fine/fill/opaque_long_u8_neon)$",
+      "--bench",
+      "--warm-up-time",
+      "3",
+      "--measurement-time",
+      "10",
+      "--sample-size",
+      "200",
+      "--nresamples",
+      "100000",
+      "--confidence-level",
+      "0.95",
+      "--noplot",
+      "--save-baseline",
+      "vello-main12-p03-modified"
+    ],
+    "binary_sha256": "8335b089194621f472cc75c29e3d8d916eac7ee2a6b514678a4b605b43f25fa0",
+    "utc_start": "2026-11-16T16:28:43.232398+00:00",
+    "exit": 0,
+    "seconds": 56.023989332999975,
+    "utc_end": "2026-11-16T16:29:39.256770+00:00",
+    "measurements": {
+      "fine/pack/unpack_block_u8_neon": {
+        "slope_ns": 47.89421615249521,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 47.851330554393805,
+          "upper_bound": 47.94005463450256
+        },
+        "estimates": "<artifact-root>/runs/main12/pair03/modified/criterion/fine_pack_unpack_block_u8_neon/vello-main12-p03-modified/estimates.json",
+        "sample_size": 200
+      },
+      "fine/pack/pack_block_u8_neon": {
+        "slope_ns": 47.463788518994754,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 47.4008090386982,
+          "upper_bound": 47.53982628084681
+        },
+        "estimates": "<artifact-root>/runs/main12/pair03/modified/criterion/fine_pack_pack_block_u8_neon/vello-main12-p03-modified/estimates.json",
+        "sample_size": 200
+      },
+      "fine/fill/opaque_long_u8_neon": {
+        "slope_ns": 33.86279197413237,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 33.797161236334674,
+          "upper_bound": 33.931889750143824
+        },
+        "estimates": "<artifact-root>/runs/main12/pair03/modified/criterion/fine_fill_opaque_long_u8_neon/vello-main12-p03-modified/estimates.json",
+        "sample_size": 200
+      },
+      "fine/fill/opaque_short_u8_neon": {
+        "slope_ns": 7.0037036624921285,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 6.991976054513975,
+          "upper_bound": 7.014116468696925
+        },
+        "estimates": "<artifact-root>/runs/main12/pair03/modified/criterion/fine_fill_opaque_short_u8_neon/vello-main12-p03-modified/estimates.json",
+        "sample_size": 200
+      }
+    },
+    "status": "complete"
+  },
+  {
+    "pair": 4,
+    "slot": 0,
+    "variant": "modified",
+    "baseline": "vello-main12-p04-modified",
+    "command": [
+      "<artifact-root>/targets/modified/release/deps/main-fab79848fca1e780",
+      "^(fine/pack/pack_block_u8_neon|fine/pack/unpack_block_u8_neon|fine/fill/opaque_short_u8_neon|fine/fill/opaque_long_u8_neon)$",
+      "--bench",
+      "--warm-up-time",
+      "3",
+      "--measurement-time",
+      "10",
+      "--sample-size",
+      "200",
+      "--nresamples",
+      "100000",
+      "--confidence-level",
+      "0.95",
+      "--noplot",
+      "--save-baseline",
+      "vello-main12-p04-modified"
+    ],
+    "binary_sha256": "8335b089194621f472cc75c29e3d8d916eac7ee2a6b514678a4b605b43f25fa0",
+    "utc_start": "2026-11-16T16:29:43.088465+00:00",
+    "exit": 0,
+    "seconds": 56.00738637500001,
+    "utc_end": "2026-11-16T16:30:39.096231+00:00",
+    "measurements": {
+      "fine/pack/unpack_block_u8_neon": {
+        "slope_ns": 48.010689479233406,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 47.97227947515955,
+          "upper_bound": 48.05204228810774
+        },
+        "estimates": "<artifact-root>/runs/main12/pair04/modified/criterion/fine_pack_unpack_block_u8_neon/vello-main12-p04-modified/estimates.json",
+        "sample_size": 200
+      },
+      "fine/pack/pack_block_u8_neon": {
+        "slope_ns": 47.386826412543954,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 47.36210493873828,
+          "upper_bound": 47.41425926349065
+        },
+        "estimates": "<artifact-root>/runs/main12/pair04/modified/criterion/fine_pack_pack_block_u8_neon/vello-main12-p04-modified/estimates.json",
+        "sample_size": 200
+      },
+      "fine/fill/opaque_long_u8_neon": {
+        "slope_ns": 33.87066572041277,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 33.81891167420924,
+          "upper_bound": 33.9233472919098
+        },
+        "estimates": "<artifact-root>/runs/main12/pair04/modified/criterion/fine_fill_opaque_long_u8_neon/vello-main12-p04-modified/estimates.json",
+        "sample_size": 200
+      },
+      "fine/fill/opaque_short_u8_neon": {
+        "slope_ns": 6.988208117321448,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 6.975226952924785,
+          "upper_bound": 7.000501435286139
+        },
+        "estimates": "<artifact-root>/runs/main12/pair04/modified/criterion/fine_fill_opaque_short_u8_neon/vello-main12-p04-modified/estimates.json",
+        "sample_size": 200
+      }
+    },
+    "status": "complete"
+  },
+  {
+    "pair": 4,
+    "slot": 1,
+    "variant": "original",
+    "baseline": "vello-main12-p04-original",
+    "command": [
+      "<artifact-root>/targets/original/release/deps/main-fab79848fca1e780",
+      "^(fine/pack/pack_block_u8_neon|fine/pack/unpack_block_u8_neon|fine/fill/opaque_short_u8_neon|fine/fill/opaque_long_u8_neon)$",
+      "--bench",
+      "--warm-up-time",
+      "3",
+      "--measurement-time",
+      "10",
+      "--sample-size",
+      "200",
+      "--nresamples",
+      "100000",
+      "--confidence-level",
+      "0.95",
+      "--noplot",
+      "--save-baseline",
+      "vello-main12-p04-original"
+    ],
+    "binary_sha256": "bda38383629c61a70dfea361f627e7c1cc6eff4baaf8ea82529fce59023e47f0",
+    "utc_start": "2026-11-16T16:30:42.915869+00:00",
+    "exit": 0,
+    "seconds": 56.018804915999965,
+    "utc_end": "2026-11-16T16:31:38.935055+00:00",
+    "measurements": {
+      "fine/pack/unpack_block_u8_neon": {
+        "slope_ns": 48.3863133169918,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 48.26482452193027,
+          "upper_bound": 48.52274590931327
+        },
+        "estimates": "<artifact-root>/runs/main12/pair04/original/criterion/fine_pack_unpack_block_u8_neon/vello-main12-p04-original/estimates.json",
+        "sample_size": 200
+      },
+      "fine/pack/pack_block_u8_neon": {
+        "slope_ns": 47.49247429330903,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 47.46595263801028,
+          "upper_bound": 47.521319426844215
+        },
+        "estimates": "<artifact-root>/runs/main12/pair04/original/criterion/fine_pack_pack_block_u8_neon/vello-main12-p04-original/estimates.json",
+        "sample_size": 200
+      },
+      "fine/fill/opaque_long_u8_neon": {
+        "slope_ns": 34.24485953436876,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 34.07891177173862,
+          "upper_bound": 34.43859881681077
+        },
+        "estimates": "<artifact-root>/runs/main12/pair04/original/criterion/fine_fill_opaque_long_u8_neon/vello-main12-p04-original/estimates.json",
+        "sample_size": 200
+      },
+      "fine/fill/opaque_short_u8_neon": {
+        "slope_ns": 6.961314205063701,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 6.9567068505518295,
+          "upper_bound": 6.966177056267825
+        },
+        "estimates": "<artifact-root>/runs/main12/pair04/original/criterion/fine_fill_opaque_short_u8_neon/vello-main12-p04-original/estimates.json",
+        "sample_size": 200
+      }
+    },
+    "status": "complete"
+  },
+  {
+    "pair": 5,
+    "slot": 0,
+    "variant": "original",
+    "baseline": "vello-main12-p05-original",
+    "command": [
+      "<artifact-root>/targets/original/release/deps/main-fab79848fca1e780",
+      "^(fine/pack/pack_block_u8_neon|fine/pack/unpack_block_u8_neon|fine/fill/opaque_short_u8_neon|fine/fill/opaque_long_u8_neon)$",
+      "--bench",
+      "--warm-up-time",
+      "3",
+      "--measurement-time",
+      "10",
+      "--sample-size",
+      "200",
+      "--nresamples",
+      "100000",
+      "--confidence-level",
+      "0.95",
+      "--noplot",
+      "--save-baseline",
+      "vello-main12-p05-original"
+    ],
+    "binary_sha256": "bda38383629c61a70dfea361f627e7c1cc6eff4baaf8ea82529fce59023e47f0",
+    "utc_start": "2026-11-16T16:31:42.752700+00:00",
+    "exit": 0,
+    "seconds": 55.946428708999974,
+    "utc_end": "2026-11-16T16:32:38.699511+00:00",
+    "measurements": {
+      "fine/pack/unpack_block_u8_neon": {
+        "slope_ns": 48.094670192196396,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 48.061965437621915,
+          "upper_bound": 48.13051454691963
+        },
+        "estimates": "<artifact-root>/runs/main12/pair05/original/criterion/fine_pack_unpack_block_u8_neon/vello-main12-p05-original/estimates.json",
+        "sample_size": 200
+      },
+      "fine/pack/pack_block_u8_neon": {
+        "slope_ns": 47.43765618391652,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 47.41451335220692,
+          "upper_bound": 47.463159384665765
+        },
+        "estimates": "<artifact-root>/runs/main12/pair05/original/criterion/fine_pack_pack_block_u8_neon/vello-main12-p05-original/estimates.json",
+        "sample_size": 200
+      },
+      "fine/fill/opaque_long_u8_neon": {
+        "slope_ns": 34.055557004212965,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 34.00207748160257,
+          "upper_bound": 34.107281389894645
+        },
+        "estimates": "<artifact-root>/runs/main12/pair05/original/criterion/fine_fill_opaque_long_u8_neon/vello-main12-p05-original/estimates.json",
+        "sample_size": 200
+      },
+      "fine/fill/opaque_short_u8_neon": {
+        "slope_ns": 6.969154009840684,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 6.965339278582755,
+          "upper_bound": 6.973070623880166
+        },
+        "estimates": "<artifact-root>/runs/main12/pair05/original/criterion/fine_fill_opaque_short_u8_neon/vello-main12-p05-original/estimates.json",
+        "sample_size": 200
+      }
+    },
+    "status": "complete"
+  },
+  {
+    "pair": 5,
+    "slot": 1,
+    "variant": "modified",
+    "baseline": "vello-main12-p05-modified",
+    "command": [
+      "<artifact-root>/targets/modified/release/deps/main-fab79848fca1e780",
+      "^(fine/pack/pack_block_u8_neon|fine/pack/unpack_block_u8_neon|fine/fill/opaque_short_u8_neon|fine/fill/opaque_long_u8_neon)$",
+      "--bench",
+      "--warm-up-time",
+      "3",
+      "--measurement-time",
+      "10",
+      "--sample-size",
+      "200",
+      "--nresamples",
+      "100000",
+      "--confidence-level",
+      "0.95",
+      "--noplot",
+      "--save-baseline",
+      "vello-main12-p05-modified"
+    ],
+    "binary_sha256": "8335b089194621f472cc75c29e3d8d916eac7ee2a6b514678a4b605b43f25fa0",
+    "utc_start": "2026-11-16T16:32:42.515623+00:00",
+    "exit": 0,
+    "seconds": 56.09847795799999,
+    "utc_end": "2026-11-16T16:33:38.614495+00:00",
+    "measurements": {
+      "fine/pack/unpack_block_u8_neon": {
+        "slope_ns": 48.04733877935874,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 48.00264184358165,
+          "upper_bound": 48.09626379806971
+        },
+        "estimates": "<artifact-root>/runs/main12/pair05/modified/criterion/fine_pack_unpack_block_u8_neon/vello-main12-p05-modified/estimates.json",
+        "sample_size": 200
+      },
+      "fine/pack/pack_block_u8_neon": {
+        "slope_ns": 47.38255385993668,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 47.35910921449407,
+          "upper_bound": 47.40837044310136
+        },
+        "estimates": "<artifact-root>/runs/main12/pair05/modified/criterion/fine_pack_pack_block_u8_neon/vello-main12-p05-modified/estimates.json",
+        "sample_size": 200
+      },
+      "fine/fill/opaque_long_u8_neon": {
+        "slope_ns": 34.22828970234113,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 34.11084193354568,
+          "upper_bound": 34.35290007947972
+        },
+        "estimates": "<artifact-root>/runs/main12/pair05/modified/criterion/fine_fill_opaque_long_u8_neon/vello-main12-p05-modified/estimates.json",
+        "sample_size": 200
+      },
+      "fine/fill/opaque_short_u8_neon": {
+        "slope_ns": 7.015827944483202,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 6.985288317622855,
+          "upper_bound": 7.060631241417819
+        },
+        "estimates": "<artifact-root>/runs/main12/pair05/modified/criterion/fine_fill_opaque_short_u8_neon/vello-main12-p05-modified/estimates.json",
+        "sample_size": 200
+      }
+    },
+    "status": "complete"
+  },
+  {
+    "pair": 6,
+    "slot": 0,
+    "variant": "modified",
+    "baseline": "vello-main12-p06-modified",
+    "command": [
+      "<artifact-root>/targets/modified/release/deps/main-fab79848fca1e780",
+      "^(fine/pack/pack_block_u8_neon|fine/pack/unpack_block_u8_neon|fine/fill/opaque_short_u8_neon|fine/fill/opaque_long_u8_neon)$",
+      "--bench",
+      "--warm-up-time",
+      "3",
+      "--measurement-time",
+      "10",
+      "--sample-size",
+      "200",
+      "--nresamples",
+      "100000",
+      "--confidence-level",
+      "0.95",
+      "--noplot",
+      "--save-baseline",
+      "vello-main12-p06-modified"
+    ],
+    "binary_sha256": "8335b089194621f472cc75c29e3d8d916eac7ee2a6b514678a4b605b43f25fa0",
+    "utc_start": "2026-11-16T16:33:42.440291+00:00",
+    "exit": 0,
+    "seconds": 55.89090570799999,
+    "utc_end": "2026-11-16T16:34:38.331583+00:00",
+    "measurements": {
+      "fine/pack/unpack_block_u8_neon": {
+        "slope_ns": 48.18369472461865,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 48.07909977458924,
+          "upper_bound": 48.29906925914067
+        },
+        "estimates": "<artifact-root>/runs/main12/pair06/modified/criterion/fine_pack_unpack_block_u8_neon/vello-main12-p06-modified/estimates.json",
+        "sample_size": 200
+      },
+      "fine/pack/pack_block_u8_neon": {
+        "slope_ns": 47.38900491392526,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 47.3633650172454,
+          "upper_bound": 47.41697552191508
+        },
+        "estimates": "<artifact-root>/runs/main12/pair06/modified/criterion/fine_pack_pack_block_u8_neon/vello-main12-p06-modified/estimates.json",
+        "sample_size": 200
+      },
+      "fine/fill/opaque_long_u8_neon": {
+        "slope_ns": 33.85997531669998,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 33.80033290165924,
+          "upper_bound": 33.91900257954787
+        },
+        "estimates": "<artifact-root>/runs/main12/pair06/modified/criterion/fine_fill_opaque_long_u8_neon/vello-main12-p06-modified/estimates.json",
+        "sample_size": 200
+      },
+      "fine/fill/opaque_short_u8_neon": {
+        "slope_ns": 6.869829446265674,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 6.854260676563195,
+          "upper_bound": 6.884989557170883
+        },
+        "estimates": "<artifact-root>/runs/main12/pair06/modified/criterion/fine_fill_opaque_short_u8_neon/vello-main12-p06-modified/estimates.json",
+        "sample_size": 200
+      }
+    },
+    "status": "complete"
+  },
+  {
+    "pair": 6,
+    "slot": 1,
+    "variant": "original",
+    "baseline": "vello-main12-p06-original",
+    "command": [
+      "<artifact-root>/targets/original/release/deps/main-fab79848fca1e780",
+      "^(fine/pack/pack_block_u8_neon|fine/pack/unpack_block_u8_neon|fine/fill/opaque_short_u8_neon|fine/fill/opaque_long_u8_neon)$",
+      "--bench",
+      "--warm-up-time",
+      "3",
+      "--measurement-time",
+      "10",
+      "--sample-size",
+      "200",
+      "--nresamples",
+      "100000",
+      "--confidence-level",
+      "0.95",
+      "--noplot",
+      "--save-baseline",
+      "vello-main12-p06-original"
+    ],
+    "binary_sha256": "bda38383629c61a70dfea361f627e7c1cc6eff4baaf8ea82529fce59023e47f0",
+    "utc_start": "2026-11-16T16:34:42.155730+00:00",
+    "exit": 0,
+    "seconds": 55.94962824999993,
+    "utc_end": "2026-11-16T16:35:38.105758+00:00",
+    "measurements": {
+      "fine/pack/unpack_block_u8_neon": {
+        "slope_ns": 48.09173360411825,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 48.06420704010961,
+          "upper_bound": 48.12093826769797
+        },
+        "estimates": "<artifact-root>/runs/main12/pair06/original/criterion/fine_pack_unpack_block_u8_neon/vello-main12-p06-original/estimates.json",
+        "sample_size": 200
+      },
+      "fine/pack/pack_block_u8_neon": {
+        "slope_ns": 47.49285394951352,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 47.46847309866465,
+          "upper_bound": 47.519215658227466
+        },
+        "estimates": "<artifact-root>/runs/main12/pair06/original/criterion/fine_pack_pack_block_u8_neon/vello-main12-p06-original/estimates.json",
+        "sample_size": 200
+      },
+      "fine/fill/opaque_long_u8_neon": {
+        "slope_ns": 34.2077850370652,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 34.12257143696952,
+          "upper_bound": 34.30454231165259
+        },
+        "estimates": "<artifact-root>/runs/main12/pair06/original/criterion/fine_fill_opaque_long_u8_neon/vello-main12-p06-original/estimates.json",
+        "sample_size": 200
+      },
+      "fine/fill/opaque_short_u8_neon": {
+        "slope_ns": 6.971884737452866,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 6.967490819816643,
+          "upper_bound": 6.976544248404953
+        },
+        "estimates": "<artifact-root>/runs/main12/pair06/original/criterion/fine_fill_opaque_short_u8_neon/vello-main12-p06-original/estimates.json",
+        "sample_size": 200
+      }
+    },
+    "status": "complete"
+  },
+  {
+    "pair": 7,
+    "slot": 0,
+    "variant": "original",
+    "baseline": "vello-main12-p07-original",
+    "command": [
+      "<artifact-root>/targets/original/release/deps/main-fab79848fca1e780",
+      "^(fine/pack/pack_block_u8_neon|fine/pack/unpack_block_u8_neon|fine/fill/opaque_short_u8_neon|fine/fill/opaque_long_u8_neon)$",
+      "--bench",
+      "--warm-up-time",
+      "3",
+      "--measurement-time",
+      "10",
+      "--sample-size",
+      "200",
+      "--nresamples",
+      "100000",
+      "--confidence-level",
+      "0.95",
+      "--noplot",
+      "--save-baseline",
+      "vello-main12-p07-original"
+    ],
+    "binary_sha256": "bda38383629c61a70dfea361f627e7c1cc6eff4baaf8ea82529fce59023e47f0",
+    "utc_start": "2026-11-16T16:35:41.938035+00:00",
+    "exit": 0,
+    "seconds": 55.95845662500005,
+    "utc_end": "2026-11-16T16:36:37.896873+00:00",
+    "measurements": {
+      "fine/pack/unpack_block_u8_neon": {
+        "slope_ns": 48.11306416071006,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 48.078413716907185,
+          "upper_bound": 48.15310368476756
+        },
+        "estimates": "<artifact-root>/runs/main12/pair07/original/criterion/fine_pack_unpack_block_u8_neon/vello-main12-p07-original/estimates.json",
+        "sample_size": 200
+      },
+      "fine/pack/pack_block_u8_neon": {
+        "slope_ns": 47.437007320521495,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 47.41403182774611,
+          "upper_bound": 47.46176610108267
+        },
+        "estimates": "<artifact-root>/runs/main12/pair07/original/criterion/fine_pack_pack_block_u8_neon/vello-main12-p07-original/estimates.json",
+        "sample_size": 200
+      },
+      "fine/fill/opaque_long_u8_neon": {
+        "slope_ns": 34.21220140408496,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 34.11400866271039,
+          "upper_bound": 34.315049677014215
+        },
+        "estimates": "<artifact-root>/runs/main12/pair07/original/criterion/fine_fill_opaque_long_u8_neon/vello-main12-p07-original/estimates.json",
+        "sample_size": 200
+      },
+      "fine/fill/opaque_short_u8_neon": {
+        "slope_ns": 6.972906504313516,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 6.968079644943797,
+          "upper_bound": 6.977864273605812
+        },
+        "estimates": "<artifact-root>/runs/main12/pair07/original/criterion/fine_fill_opaque_short_u8_neon/vello-main12-p07-original/estimates.json",
+        "sample_size": 200
+      }
+    },
+    "status": "complete"
+  },
+  {
+    "pair": 7,
+    "slot": 1,
+    "variant": "modified",
+    "baseline": "vello-main12-p07-modified",
+    "command": [
+      "<artifact-root>/targets/modified/release/deps/main-fab79848fca1e780",
+      "^(fine/pack/pack_block_u8_neon|fine/pack/unpack_block_u8_neon|fine/fill/opaque_short_u8_neon|fine/fill/opaque_long_u8_neon)$",
+      "--bench",
+      "--warm-up-time",
+      "3",
+      "--measurement-time",
+      "10",
+      "--sample-size",
+      "200",
+      "--nresamples",
+      "100000",
+      "--confidence-level",
+      "0.95",
+      "--noplot",
+      "--save-baseline",
+      "vello-main12-p07-modified"
+    ],
+    "binary_sha256": "8335b089194621f472cc75c29e3d8d916eac7ee2a6b514678a4b605b43f25fa0",
+    "utc_start": "2026-11-16T16:36:41.727849+00:00",
+    "exit": 0,
+    "seconds": 56.004590332999896,
+    "utc_end": "2026-11-16T16:37:37.732832+00:00",
+    "measurements": {
+      "fine/pack/unpack_block_u8_neon": {
+        "slope_ns": 48.186937141911976,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 48.138117015727516,
+          "upper_bound": 48.23814881195636
+        },
+        "estimates": "<artifact-root>/runs/main12/pair07/modified/criterion/fine_pack_unpack_block_u8_neon/vello-main12-p07-modified/estimates.json",
+        "sample_size": 200
+      },
+      "fine/pack/pack_block_u8_neon": {
+        "slope_ns": 47.50490783581006,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 47.42521065582463,
+          "upper_bound": 47.60310643946783
+        },
+        "estimates": "<artifact-root>/runs/main12/pair07/modified/criterion/fine_pack_pack_block_u8_neon/vello-main12-p07-modified/estimates.json",
+        "sample_size": 200
+      },
+      "fine/fill/opaque_long_u8_neon": {
+        "slope_ns": 34.07583417382193,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 33.9734171504096,
+          "upper_bound": 34.182237867784785
+        },
+        "estimates": "<artifact-root>/runs/main12/pair07/modified/criterion/fine_fill_opaque_long_u8_neon/vello-main12-p07-modified/estimates.json",
+        "sample_size": 200
+      },
+      "fine/fill/opaque_short_u8_neon": {
+        "slope_ns": 6.9135185384790665,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 6.898953352773919,
+          "upper_bound": 6.928187250765576
+        },
+        "estimates": "<artifact-root>/runs/main12/pair07/modified/criterion/fine_fill_opaque_short_u8_neon/vello-main12-p07-modified/estimates.json",
+        "sample_size": 200
+      }
+    },
+    "status": "complete"
+  },
+  {
+    "pair": 8,
+    "slot": 0,
+    "variant": "modified",
+    "baseline": "vello-main12-p08-modified",
+    "command": [
+      "<artifact-root>/targets/modified/release/deps/main-fab79848fca1e780",
+      "^(fine/pack/pack_block_u8_neon|fine/pack/unpack_block_u8_neon|fine/fill/opaque_short_u8_neon|fine/fill/opaque_long_u8_neon)$",
+      "--bench",
+      "--warm-up-time",
+      "3",
+      "--measurement-time",
+      "10",
+      "--sample-size",
+      "200",
+      "--nresamples",
+      "100000",
+      "--confidence-level",
+      "0.95",
+      "--noplot",
+      "--save-baseline",
+      "vello-main12-p08-modified"
+    ],
+    "binary_sha256": "8335b089194621f472cc75c29e3d8d916eac7ee2a6b514678a4b605b43f25fa0",
+    "utc_start": "2026-11-16T16:37:41.559795+00:00",
+    "exit": 0,
+    "seconds": 55.952665249999995,
+    "utc_end": "2026-11-16T16:38:37.512845+00:00",
+    "measurements": {
+      "fine/pack/unpack_block_u8_neon": {
+        "slope_ns": 48.001923554217434,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 47.96102047951601,
+          "upper_bound": 48.04705853549823
+        },
+        "estimates": "<artifact-root>/runs/main12/pair08/modified/criterion/fine_pack_unpack_block_u8_neon/vello-main12-p08-modified/estimates.json",
+        "sample_size": 200
+      },
+      "fine/pack/pack_block_u8_neon": {
+        "slope_ns": 47.39362857381967,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 47.36740693551569,
+          "upper_bound": 47.42355713659164
+        },
+        "estimates": "<artifact-root>/runs/main12/pair08/modified/criterion/fine_pack_pack_block_u8_neon/vello-main12-p08-modified/estimates.json",
+        "sample_size": 200
+      },
+      "fine/fill/opaque_long_u8_neon": {
+        "slope_ns": 34.12322892334791,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 34.066015013557454,
+          "upper_bound": 34.17864259960091
+        },
+        "estimates": "<artifact-root>/runs/main12/pair08/modified/criterion/fine_fill_opaque_long_u8_neon/vello-main12-p08-modified/estimates.json",
+        "sample_size": 200
+      },
+      "fine/fill/opaque_short_u8_neon": {
+        "slope_ns": 6.9656307509964615,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 6.95149339423636,
+          "upper_bound": 6.979306068168135
+        },
+        "estimates": "<artifact-root>/runs/main12/pair08/modified/criterion/fine_fill_opaque_short_u8_neon/vello-main12-p08-modified/estimates.json",
+        "sample_size": 200
+      }
+    },
+    "status": "complete"
+  },
+  {
+    "pair": 8,
+    "slot": 1,
+    "variant": "original",
+    "baseline": "vello-main12-p08-original",
+    "command": [
+      "<artifact-root>/targets/original/release/deps/main-fab79848fca1e780",
+      "^(fine/pack/pack_block_u8_neon|fine/pack/unpack_block_u8_neon|fine/fill/opaque_short_u8_neon|fine/fill/opaque_long_u8_neon)$",
+      "--bench",
+      "--warm-up-time",
+      "3",
+      "--measurement-time",
+      "10",
+      "--sample-size",
+      "200",
+      "--nresamples",
+      "100000",
+      "--confidence-level",
+      "0.95",
+      "--noplot",
+      "--save-baseline",
+      "vello-main12-p08-original"
+    ],
+    "binary_sha256": "bda38383629c61a70dfea361f627e7c1cc6eff4baaf8ea82529fce59023e47f0",
+    "utc_start": "2026-11-16T16:38:41.332525+00:00",
+    "exit": 0,
+    "seconds": 55.94719179200001,
+    "utc_end": "2026-11-16T16:39:37.280821+00:00",
+    "measurements": {
+      "fine/pack/unpack_block_u8_neon": {
+        "slope_ns": 48.10358134086225,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 48.0703115603313,
+          "upper_bound": 48.13965746638563
+        },
+        "estimates": "<artifact-root>/runs/main12/pair08/original/criterion/fine_pack_unpack_block_u8_neon/vello-main12-p08-original/estimates.json",
+        "sample_size": 200
+      },
+      "fine/pack/pack_block_u8_neon": {
+        "slope_ns": 47.43229650132922,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 47.40629680051232,
+          "upper_bound": 47.46134134788039
+        },
+        "estimates": "<artifact-root>/runs/main12/pair08/original/criterion/fine_pack_pack_block_u8_neon/vello-main12-p08-original/estimates.json",
+        "sample_size": 200
+      },
+      "fine/fill/opaque_long_u8_neon": {
+        "slope_ns": 34.040778811301045,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 33.96747255709191,
+          "upper_bound": 34.11707091350422
+        },
+        "estimates": "<artifact-root>/runs/main12/pair08/original/criterion/fine_fill_opaque_long_u8_neon/vello-main12-p08-original/estimates.json",
+        "sample_size": 200
+      },
+      "fine/fill/opaque_short_u8_neon": {
+        "slope_ns": 6.986387490004156,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 6.9823696291942525,
+          "upper_bound": 6.990632314526056
+        },
+        "estimates": "<artifact-root>/runs/main12/pair08/original/criterion/fine_fill_opaque_short_u8_neon/vello-main12-p08-original/estimates.json",
+        "sample_size": 200
+      }
+    },
+    "status": "complete"
+  },
+  {
+    "pair": 9,
+    "slot": 0,
+    "variant": "original",
+    "baseline": "vello-main12-p09-original",
+    "command": [
+      "<artifact-root>/targets/original/release/deps/main-fab79848fca1e780",
+      "^(fine/pack/pack_block_u8_neon|fine/pack/unpack_block_u8_neon|fine/fill/opaque_short_u8_neon|fine/fill/opaque_long_u8_neon)$",
+      "--bench",
+      "--warm-up-time",
+      "3",
+      "--measurement-time",
+      "10",
+      "--sample-size",
+      "200",
+      "--nresamples",
+      "100000",
+      "--confidence-level",
+      "0.95",
+      "--noplot",
+      "--save-baseline",
+      "vello-main12-p09-original"
+    ],
+    "binary_sha256": "bda38383629c61a70dfea361f627e7c1cc6eff4baaf8ea82529fce59023e47f0",
+    "utc_start": "2026-11-16T16:39:41.103456+00:00",
+    "exit": 0,
+    "seconds": 55.95424770900013,
+    "utc_end": "2026-11-16T16:40:37.058781+00:00",
+    "measurements": {
+      "fine/pack/unpack_block_u8_neon": {
+        "slope_ns": 48.13170347850617,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 48.082754975197254,
+          "upper_bound": 48.19312397857156
+        },
+        "estimates": "<artifact-root>/runs/main12/pair09/original/criterion/fine_pack_unpack_block_u8_neon/vello-main12-p09-original/estimates.json",
+        "sample_size": 200
+      },
+      "fine/pack/pack_block_u8_neon": {
+        "slope_ns": 47.446900011380066,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 47.41986642131755,
+          "upper_bound": 47.47720650615844
+        },
+        "estimates": "<artifact-root>/runs/main12/pair09/original/criterion/fine_pack_pack_block_u8_neon/vello-main12-p09-original/estimates.json",
+        "sample_size": 200
+      },
+      "fine/fill/opaque_long_u8_neon": {
+        "slope_ns": 34.3279773988221,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 34.206160067278056,
+          "upper_bound": 34.455584034454155
+        },
+        "estimates": "<artifact-root>/runs/main12/pair09/original/criterion/fine_fill_opaque_long_u8_neon/vello-main12-p09-original/estimates.json",
+        "sample_size": 200
+      },
+      "fine/fill/opaque_short_u8_neon": {
+        "slope_ns": 6.986770780812599,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 6.980971894826809,
+          "upper_bound": 6.992997342753659
+        },
+        "estimates": "<artifact-root>/runs/main12/pair09/original/criterion/fine_fill_opaque_short_u8_neon/vello-main12-p09-original/estimates.json",
+        "sample_size": 200
+      }
+    },
+    "status": "complete"
+  },
+  {
+    "pair": 9,
+    "slot": 1,
+    "variant": "modified",
+    "baseline": "vello-main12-p09-modified",
+    "command": [
+      "<artifact-root>/targets/modified/release/deps/main-fab79848fca1e780",
+      "^(fine/pack/pack_block_u8_neon|fine/pack/unpack_block_u8_neon|fine/fill/opaque_short_u8_neon|fine/fill/opaque_long_u8_neon)$",
+      "--bench",
+      "--warm-up-time",
+      "3",
+      "--measurement-time",
+      "10",
+      "--sample-size",
+      "200",
+      "--nresamples",
+      "100000",
+      "--confidence-level",
+      "0.95",
+      "--noplot",
+      "--save-baseline",
+      "vello-main12-p09-modified"
+    ],
+    "binary_sha256": "8335b089194621f472cc75c29e3d8d916eac7ee2a6b514678a4b605b43f25fa0",
+    "utc_start": "2026-11-16T16:40:40.890272+00:00",
+    "exit": 0,
+    "seconds": 56.05374125000003,
+    "utc_end": "2026-11-16T16:41:36.944432+00:00",
+    "measurements": {
+      "fine/pack/unpack_block_u8_neon": {
+        "slope_ns": 48.21879714386947,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 48.1701836727554,
+          "upper_bound": 48.26836366431876
+        },
+        "estimates": "<artifact-root>/runs/main12/pair09/modified/criterion/fine_pack_unpack_block_u8_neon/vello-main12-p09-modified/estimates.json",
+        "sample_size": 200
+      },
+      "fine/pack/pack_block_u8_neon": {
+        "slope_ns": 47.40613146688269,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 47.38211874401488,
+          "upper_bound": 47.43136051254172
+        },
+        "estimates": "<artifact-root>/runs/main12/pair09/modified/criterion/fine_pack_pack_block_u8_neon/vello-main12-p09-modified/estimates.json",
+        "sample_size": 200
+      },
+      "fine/fill/opaque_long_u8_neon": {
+        "slope_ns": 34.42413304456443,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 34.313521634028035,
+          "upper_bound": 34.54367030952093
+        },
+        "estimates": "<artifact-root>/runs/main12/pair09/modified/criterion/fine_fill_opaque_long_u8_neon/vello-main12-p09-modified/estimates.json",
+        "sample_size": 200
+      },
+      "fine/fill/opaque_short_u8_neon": {
+        "slope_ns": 6.97095627990968,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 6.962173581328753,
+          "upper_bound": 6.979320937596673
+        },
+        "estimates": "<artifact-root>/runs/main12/pair09/modified/criterion/fine_fill_opaque_short_u8_neon/vello-main12-p09-modified/estimates.json",
+        "sample_size": 200
+      }
+    },
+    "status": "complete"
+  },
+  {
+    "pair": 10,
+    "slot": 0,
+    "variant": "modified",
+    "baseline": "vello-main12-p10-modified",
+    "command": [
+      "<artifact-root>/targets/modified/release/deps/main-fab79848fca1e780",
+      "^(fine/pack/pack_block_u8_neon|fine/pack/unpack_block_u8_neon|fine/fill/opaque_short_u8_neon|fine/fill/opaque_long_u8_neon)$",
+      "--bench",
+      "--warm-up-time",
+      "3",
+      "--measurement-time",
+      "10",
+      "--sample-size",
+      "200",
+      "--nresamples",
+      "100000",
+      "--confidence-level",
+      "0.95",
+      "--noplot",
+      "--save-baseline",
+      "vello-main12-p10-modified"
+    ],
+    "binary_sha256": "8335b089194621f472cc75c29e3d8d916eac7ee2a6b514678a4b605b43f25fa0",
+    "utc_start": "2026-11-16T16:41:40.770524+00:00",
+    "exit": 0,
+    "seconds": 56.04751791600006,
+    "utc_end": "2026-11-16T16:42:36.818463+00:00",
+    "measurements": {
+      "fine/pack/unpack_block_u8_neon": {
+        "slope_ns": 48.39202989688611,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 48.30344119112645,
+          "upper_bound": 48.491647682833104
+        },
+        "estimates": "<artifact-root>/runs/main12/pair10/modified/criterion/fine_pack_unpack_block_u8_neon/vello-main12-p10-modified/estimates.json",
+        "sample_size": 200
+      },
+      "fine/pack/pack_block_u8_neon": {
+        "slope_ns": 47.388809436552755,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 47.362046319851885,
+          "upper_bound": 47.41913695293458
+        },
+        "estimates": "<artifact-root>/runs/main12/pair10/modified/criterion/fine_pack_pack_block_u8_neon/vello-main12-p10-modified/estimates.json",
+        "sample_size": 200
+      },
+      "fine/fill/opaque_long_u8_neon": {
+        "slope_ns": 34.079554863845196,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 34.01362298995614,
+          "upper_bound": 34.14950562865496
+        },
+        "estimates": "<artifact-root>/runs/main12/pair10/modified/criterion/fine_fill_opaque_long_u8_neon/vello-main12-p10-modified/estimates.json",
+        "sample_size": 200
+      },
+      "fine/fill/opaque_short_u8_neon": {
+        "slope_ns": 6.964416359179181,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 6.947817593031526,
+          "upper_bound": 6.980581738188781
+        },
+        "estimates": "<artifact-root>/runs/main12/pair10/modified/criterion/fine_fill_opaque_short_u8_neon/vello-main12-p10-modified/estimates.json",
+        "sample_size": 200
+      }
+    },
+    "status": "complete"
+  },
+  {
+    "pair": 10,
+    "slot": 1,
+    "variant": "original",
+    "baseline": "vello-main12-p10-original",
+    "command": [
+      "<artifact-root>/targets/original/release/deps/main-fab79848fca1e780",
+      "^(fine/pack/pack_block_u8_neon|fine/pack/unpack_block_u8_neon|fine/fill/opaque_short_u8_neon|fine/fill/opaque_long_u8_neon)$",
+      "--bench",
+      "--warm-up-time",
+      "3",
+      "--measurement-time",
+      "10",
+      "--sample-size",
+      "200",
+      "--nresamples",
+      "100000",
+      "--confidence-level",
+      "0.95",
+      "--noplot",
+      "--save-baseline",
+      "vello-main12-p10-original"
+    ],
+    "binary_sha256": "bda38383629c61a70dfea361f627e7c1cc6eff4baaf8ea82529fce59023e47f0",
+    "utc_start": "2026-11-16T16:42:40.662486+00:00",
+    "exit": 0,
+    "seconds": 55.95588937499997,
+    "utc_end": "2026-11-16T16:43:36.618816+00:00",
+    "measurements": {
+      "fine/pack/unpack_block_u8_neon": {
+        "slope_ns": 48.119879761927265,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 48.08124344968044,
+          "upper_bound": 48.165175731697346
+        },
+        "estimates": "<artifact-root>/runs/main12/pair10/original/criterion/fine_pack_unpack_block_u8_neon/vello-main12-p10-original/estimates.json",
+        "sample_size": 200
+      },
+      "fine/pack/pack_block_u8_neon": {
+        "slope_ns": 47.44074190827565,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 47.41492241249558,
+          "upper_bound": 47.46885493304588
+        },
+        "estimates": "<artifact-root>/runs/main12/pair10/original/criterion/fine_pack_pack_block_u8_neon/vello-main12-p10-original/estimates.json",
+        "sample_size": 200
+      },
+      "fine/fill/opaque_long_u8_neon": {
+        "slope_ns": 34.478345104187746,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 34.361983788598344,
+          "upper_bound": 34.60621105530287
+        },
+        "estimates": "<artifact-root>/runs/main12/pair10/original/criterion/fine_fill_opaque_long_u8_neon/vello-main12-p10-original/estimates.json",
+        "sample_size": 200
+      },
+      "fine/fill/opaque_short_u8_neon": {
+        "slope_ns": 6.955630357160781,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 6.948196988834629,
+          "upper_bound": 6.9642221173272185
+        },
+        "estimates": "<artifact-root>/runs/main12/pair10/original/criterion/fine_fill_opaque_short_u8_neon/vello-main12-p10-original/estimates.json",
+        "sample_size": 200
+      }
+    },
+    "status": "complete"
+  },
+  {
+    "pair": 11,
+    "slot": 0,
+    "variant": "original",
+    "baseline": "vello-main12-p11-original",
+    "command": [
+      "<artifact-root>/targets/original/release/deps/main-fab79848fca1e780",
+      "^(fine/pack/pack_block_u8_neon|fine/pack/unpack_block_u8_neon|fine/fill/opaque_short_u8_neon|fine/fill/opaque_long_u8_neon)$",
+      "--bench",
+      "--warm-up-time",
+      "3",
+      "--measurement-time",
+      "10",
+      "--sample-size",
+      "200",
+      "--nresamples",
+      "100000",
+      "--confidence-level",
+      "0.95",
+      "--noplot",
+      "--save-baseline",
+      "vello-main12-p11-original"
+    ],
+    "binary_sha256": "bda38383629c61a70dfea361f627e7c1cc6eff4baaf8ea82529fce59023e47f0",
+    "utc_start": "2026-11-16T16:43:40.447130+00:00",
+    "exit": 0,
+    "seconds": 55.99528758300016,
+    "utc_end": "2026-11-16T16:44:36.442839+00:00",
+    "measurements": {
+      "fine/pack/unpack_block_u8_neon": {
+        "slope_ns": 48.14147922098803,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 48.087941188808834,
+          "upper_bound": 48.20740534494012
+        },
+        "estimates": "<artifact-root>/runs/main12/pair11/original/criterion/fine_pack_unpack_block_u8_neon/vello-main12-p11-original/estimates.json",
+        "sample_size": 200
+      },
+      "fine/pack/pack_block_u8_neon": {
+        "slope_ns": 47.558542884912974,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 47.5199704570869,
+          "upper_bound": 47.59831278268224
+        },
+        "estimates": "<artifact-root>/runs/main12/pair11/original/criterion/fine_pack_pack_block_u8_neon/vello-main12-p11-original/estimates.json",
+        "sample_size": 200
+      },
+      "fine/fill/opaque_long_u8_neon": {
+        "slope_ns": 34.055677460060465,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 33.99419296399937,
+          "upper_bound": 34.11823680401587
+        },
+        "estimates": "<artifact-root>/runs/main12/pair11/original/criterion/fine_fill_opaque_long_u8_neon/vello-main12-p11-original/estimates.json",
+        "sample_size": 200
+      },
+      "fine/fill/opaque_short_u8_neon": {
+        "slope_ns": 6.985973015571527,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 6.981248825013095,
+          "upper_bound": 6.991066735997896
+        },
+        "estimates": "<artifact-root>/runs/main12/pair11/original/criterion/fine_fill_opaque_short_u8_neon/vello-main12-p11-original/estimates.json",
+        "sample_size": 200
+      }
+    },
+    "status": "complete"
+  },
+  {
+    "pair": 11,
+    "slot": 1,
+    "variant": "modified",
+    "baseline": "vello-main12-p11-modified",
+    "command": [
+      "<artifact-root>/targets/modified/release/deps/main-fab79848fca1e780",
+      "^(fine/pack/pack_block_u8_neon|fine/pack/unpack_block_u8_neon|fine/fill/opaque_short_u8_neon|fine/fill/opaque_long_u8_neon)$",
+      "--bench",
+      "--warm-up-time",
+      "3",
+      "--measurement-time",
+      "10",
+      "--sample-size",
+      "200",
+      "--nresamples",
+      "100000",
+      "--confidence-level",
+      "0.95",
+      "--noplot",
+      "--save-baseline",
+      "vello-main12-p11-modified"
+    ],
+    "binary_sha256": "8335b089194621f472cc75c29e3d8d916eac7ee2a6b514678a4b605b43f25fa0",
+    "utc_start": "2026-11-16T16:44:40.278072+00:00",
+    "exit": 0,
+    "seconds": 56.0803040830001,
+    "utc_end": "2026-11-16T16:45:36.358793+00:00",
+    "measurements": {
+      "fine/pack/unpack_block_u8_neon": {
+        "slope_ns": 47.95547527494124,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 47.924095191082486,
+          "upper_bound": 47.99150961144771
+        },
+        "estimates": "<artifact-root>/runs/main12/pair11/modified/criterion/fine_pack_unpack_block_u8_neon/vello-main12-p11-modified/estimates.json",
+        "sample_size": 200
+      },
+      "fine/pack/pack_block_u8_neon": {
+        "slope_ns": 47.47522695511714,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 47.41422324998299,
+          "upper_bound": 47.54871477010174
+        },
+        "estimates": "<artifact-root>/runs/main12/pair11/modified/criterion/fine_pack_pack_block_u8_neon/vello-main12-p11-modified/estimates.json",
+        "sample_size": 200
+      },
+      "fine/fill/opaque_long_u8_neon": {
+        "slope_ns": 34.34242547442647,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 34.22651100330167,
+          "upper_bound": 34.47181003824018
+        },
+        "estimates": "<artifact-root>/runs/main12/pair11/modified/criterion/fine_fill_opaque_long_u8_neon/vello-main12-p11-modified/estimates.json",
+        "sample_size": 200
+      },
+      "fine/fill/opaque_short_u8_neon": {
+        "slope_ns": 6.998256325103237,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 6.986699039331609,
+          "upper_bound": 7.0084749637814845
+        },
+        "estimates": "<artifact-root>/runs/main12/pair11/modified/criterion/fine_fill_opaque_short_u8_neon/vello-main12-p11-modified/estimates.json",
+        "sample_size": 200
+      }
+    },
+    "status": "complete"
+  },
+  {
+    "pair": 12,
+    "slot": 0,
+    "variant": "modified",
+    "baseline": "vello-main12-p12-modified",
+    "command": [
+      "<artifact-root>/targets/modified/release/deps/main-fab79848fca1e780",
+      "^(fine/pack/pack_block_u8_neon|fine/pack/unpack_block_u8_neon|fine/fill/opaque_short_u8_neon|fine/fill/opaque_long_u8_neon)$",
+      "--bench",
+      "--warm-up-time",
+      "3",
+      "--measurement-time",
+      "10",
+      "--sample-size",
+      "200",
+      "--nresamples",
+      "100000",
+      "--confidence-level",
+      "0.95",
+      "--noplot",
+      "--save-baseline",
+      "vello-main12-p12-modified"
+    ],
+    "binary_sha256": "8335b089194621f472cc75c29e3d8d916eac7ee2a6b514678a4b605b43f25fa0",
+    "utc_start": "2026-11-16T16:45:40.198837+00:00",
+    "exit": 0,
+    "seconds": 56.012706292000075,
+    "utc_end": "2026-11-16T16:46:36.211953+00:00",
+    "measurements": {
+      "fine/pack/unpack_block_u8_neon": {
+        "slope_ns": 48.033473415851866,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 47.992715896063466,
+          "upper_bound": 48.07685532394121
+        },
+        "estimates": "<artifact-root>/runs/main12/pair12/modified/criterion/fine_pack_unpack_block_u8_neon/vello-main12-p12-modified/estimates.json",
+        "sample_size": 200
+      },
+      "fine/pack/pack_block_u8_neon": {
+        "slope_ns": 47.38349626483838,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 47.358796025519304,
+          "upper_bound": 47.40989366878797
+        },
+        "estimates": "<artifact-root>/runs/main12/pair12/modified/criterion/fine_pack_pack_block_u8_neon/vello-main12-p12-modified/estimates.json",
+        "sample_size": 200
+      },
+      "fine/fill/opaque_long_u8_neon": {
+        "slope_ns": 34.254650564657716,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 34.197230132868185,
+          "upper_bound": 34.3156097022938
+        },
+        "estimates": "<artifact-root>/runs/main12/pair12/modified/criterion/fine_fill_opaque_long_u8_neon/vello-main12-p12-modified/estimates.json",
+        "sample_size": 200
+      },
+      "fine/fill/opaque_short_u8_neon": {
+        "slope_ns": 7.016550496491336,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 7.007383785726482,
+          "upper_bound": 7.025473445792054
+        },
+        "estimates": "<artifact-root>/runs/main12/pair12/modified/criterion/fine_fill_opaque_short_u8_neon/vello-main12-p12-modified/estimates.json",
+        "sample_size": 200
+      }
+    },
+    "status": "complete"
+  },
+  {
+    "pair": 12,
+    "slot": 1,
+    "variant": "original",
+    "baseline": "vello-main12-p12-original",
+    "command": [
+      "<artifact-root>/targets/original/release/deps/main-fab79848fca1e780",
+      "^(fine/pack/pack_block_u8_neon|fine/pack/unpack_block_u8_neon|fine/fill/opaque_short_u8_neon|fine/fill/opaque_long_u8_neon)$",
+      "--bench",
+      "--warm-up-time",
+      "3",
+      "--measurement-time",
+      "10",
+      "--sample-size",
+      "200",
+      "--nresamples",
+      "100000",
+      "--confidence-level",
+      "0.95",
+      "--noplot",
+      "--save-baseline",
+      "vello-main12-p12-original"
+    ],
+    "binary_sha256": "bda38383629c61a70dfea361f627e7c1cc6eff4baaf8ea82529fce59023e47f0",
+    "utc_start": "2026-11-16T16:46:40.039236+00:00",
+    "exit": 0,
+    "seconds": 55.94590329199991,
+    "utc_end": "2026-11-16T16:47:35.985540+00:00",
+    "measurements": {
+      "fine/pack/unpack_block_u8_neon": {
+        "slope_ns": 48.05536378777703,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 48.028952166243876,
+          "upper_bound": 48.08431294256139
+        },
+        "estimates": "<artifact-root>/runs/main12/pair12/original/criterion/fine_pack_unpack_block_u8_neon/vello-main12-p12-original/estimates.json",
+        "sample_size": 200
+      },
+      "fine/pack/pack_block_u8_neon": {
+        "slope_ns": 47.447554517943026,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 47.42193624948144,
+          "upper_bound": 47.47646437274977
+        },
+        "estimates": "<artifact-root>/runs/main12/pair12/original/criterion/fine_pack_pack_block_u8_neon/vello-main12-p12-original/estimates.json",
+        "sample_size": 200
+      },
+      "fine/fill/opaque_long_u8_neon": {
+        "slope_ns": 34.22760882492789,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 34.15574206696301,
+          "upper_bound": 34.29948297670312
+        },
+        "estimates": "<artifact-root>/runs/main12/pair12/original/criterion/fine_fill_opaque_long_u8_neon/vello-main12-p12-original/estimates.json",
+        "sample_size": 200
+      },
+      "fine/fill/opaque_short_u8_neon": {
+        "slope_ns": 6.956728995339336,
+        "slope_ci": {
+          "confidence_level": 0.95,
+          "lower_bound": 6.95329481743335,
+          "upper_bound": 6.960437792775131
+        },
+        "estimates": "<artifact-root>/runs/main12/pair12/original/criterion/fine_fill_opaque_short_u8_neon/vello-main12-p12-original/estimates.json",
+        "sample_size": 200
+      }
+    },
+    "status": "complete"
+  }
+]

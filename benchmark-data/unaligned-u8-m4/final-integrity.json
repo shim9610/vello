@@ -1,0 +1,16 @@
+{
+  "original": {
+    "worktree_clean": true,
+    "commit": "71109540002c9a2c6bb7c000ce8c829ba261304b",
+    "lock_sha256": "66dfe026a6f22cbde77d567985ce5c4db41b38ea6ff2b392debc4ad3eab74f06",
+    "binary_sha256": "bda38383629c61a70dfea361f627e7c1cc6eff4baaf8ea82529fce59023e47f0",
+    "file": "<artifact-root>/targets/original/release/deps/main-fab79848fca1e780: Mach-O 64-bit executable arm64"
+  },
+  "modified": {
+    "worktree_clean": true,
+    "commit": "e1c0151ee65fbef43f37a73bb88a5745c32f22d1",
+    "lock_sha256": "66dfe026a6f22cbde77d567985ce5c4db41b38ea6ff2b392debc4ad3eab74f06",
+    "binary_sha256": "8335b089194621f472cc75c29e3d8d916eac7ee2a6b514678a4b605b43f25fa0",
+    "file": "<artifact-root>/targets/modified/release/deps/main-fab79848fca1e780: Mach-O 64-bit executable arm64"
+  }
+}

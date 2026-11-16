@@ -1,0 +1,14 @@
+{
+  "original": {
+    "vello_bench": "3a80eef99b6e82a8e24ab1bb00d8435533e6f70c",
+    "vello_tests/vello_dev_macros": "19c2f478d57f79d540b438aa6657be0c32461cc7",
+    "Cargo.lock": "12d2ff0da6c3eadaca64375d28f00cbe37d6cfae",
+    ".cargo/config.toml": "bc3896139f0427cfeb294e9000f0fe90cee69848"
+  },
+  "modified": {
+    "vello_bench": "3a80eef99b6e82a8e24ab1bb00d8435533e6f70c",
+    "vello_tests/vello_dev_macros": "19c2f478d57f79d540b438aa6657be0c32461cc7",
+    "Cargo.lock": "12d2ff0da6c3eadaca64375d28f00cbe37d6cfae",
+    ".cargo/config.toml": "bc3896139f0427cfeb294e9000f0fe90cee69848"
+  }
+}

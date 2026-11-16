@@ -1,0 +1,14 @@
+{
+  "original": {
+    "path": "<artifact-root>/targets/original/release/deps/main-fab79848fca1e780",
+    "sha256": "bda38383629c61a70dfea361f627e7c1cc6eff4baaf8ea82529fce59023e47f0",
+    "file": "<artifact-root>/targets/original/release/deps/main-fab79848fca1e780: Mach-O 64-bit executable arm64",
+    "head": "71109540002c9a2c6bb7c000ce8c829ba261304b"
+  },
+  "modified": {
+    "path": "<artifact-root>/targets/modified/release/deps/main-fab79848fca1e780",
+    "sha256": "8335b089194621f472cc75c29e3d8d916eac7ee2a6b514678a4b605b43f25fa0",
+    "file": "<artifact-root>/targets/modified/release/deps/main-fab79848fca1e780: Mach-O 64-bit executable arm64",
+    "head": "e1c0151ee65fbef43f37a73bb88a5745c32f22d1"
+  }
+}

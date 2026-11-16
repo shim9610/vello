@@ -1,0 +1,33 @@
+{
+  "raw_slopes_refitted": 96,
+  "samples_per_slope": 200,
+  "maximum_absolute_refit_error_ns": 2.1316282072803006e-14,
+  "independent_pairs": 12,
+  "pair_order_verified": true,
+  "comparisons": [
+    {
+      "benchmark": "fine/pack/pack_block_u8_neon",
+      "delta_percent": -0.16082736366759515,
+      "sign_flip_p": 0.013671875,
+      "holm_p": 0.0546875
+    },
+    {
+      "benchmark": "fine/pack/unpack_block_u8_neon",
+      "delta_percent": -0.017455186230744883,
+      "sign_flip_p": 0.8818359375,
+      "holm_p": 1
+    },
+    {
+      "benchmark": "fine/fill/opaque_short_u8_neon",
+      "delta_percent": -0.10185643132650474,
+      "sign_flip_p": 0.63818359375,
+      "holm_p": 1
+    },
+    {
+      "benchmark": "fine/fill/opaque_long_u8_neon",
+      "delta_percent": -0.0827637272089058,
+      "sign_flip_p": 0.67431640625,
+      "holm_p": 1
+    }
+  ]
+}

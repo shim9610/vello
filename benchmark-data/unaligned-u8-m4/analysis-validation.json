@@ -1,0 +1,9 @@
+{
+  "fixture_trees_equal": true,
+  "native_slopes_refit_from_all_raw_samples": 96,
+  "criterion_samples_per_series": 200,
+  "total_timed_samples": 19200,
+  "known10percent_bootstrap_check": true,
+  "median_interpolation_check": true,
+  "fixed_process_pairs": 12
+}

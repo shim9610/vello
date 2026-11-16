@@ -1,0 +1,742 @@
+{
+  "campaign": "runs/main12",
+  "pairs": 12,
+  "primary_unit": "One separately launched process per version per pair; slope ns/iteration; all200 samples retained within Criterion run",
+  "analysis": "geometric mean times, paired log-ratio percentile bootstrap100000 seed20261117+i; exact two-sided paired sign-flip; Holm family4 alpha0.05; 98.75% per-comparison bootstrap intervals also reported for Bonferroni family95%",
+  "thermal_counts": {
+    "0": 299
+  },
+  "thermal_state_names": {
+    "0": "nominal",
+    "1": "fair",
+    "2": "serious",
+    "3": "critical"
+  },
+  "needs_noise_diagnostic": false,
+  "benchmarks": [
+    {
+      "benchmark": "fine/pack/pack_block_u8_neon",
+      "n_pairs": 12,
+      "original_geomean_ns": 47.485406609227866,
+      "modified_geomean_ns": 47.40903708165141,
+      "original_mean_ns": 47.485504780313136,
+      "modified_mean_ns": 47.40905735928048,
+      "original_sd_ns": 0.10101209434671242,
+      "modified_sd_ns": 0.04581364302290789,
+      "original_cv_percent": 0.2127219554978611,
+      "modified_cv_percent": 0.09663479000588,
+      "delta_percent": -0.16082736366759515,
+      "paired_bootstrap95_ci_percent": [
+        -0.3174597802099488,
+        -0.04693148314567783
+      ],
+      "bonferroni_family95_ci_percent": [
+        -0.37272384926117824,
+        -0.025312415004036304
+      ],
+      "exact_two_sided_signflip_p": 0.013671875,
+      "modified_faster_pairs": 10,
+      "modified_slower_pairs": 2,
+      "per_pair_delta_sd_percentage_points": 0.25214639648440246,
+      "per_pair_delta_minmax_percent": [
+        -0.883706038006582,
+        0.14313827773699828
+      ],
+      "order_delta_percent": {
+        "AB": -0.17341330573926936,
+        "BA": -0.14823983478480096
+      },
+      "half_delta_percent": {
+        "first": -0.24753201511886047,
+        "second": -0.07404734870167046
+      },
+      "pairs": [
+        {
+          "pair": 1,
+          "order": "AB",
+          "original_ns": 47.782110489465666,
+          "modified_ns": 47.35985709398328,
+          "delta_percent": -0.883706038006582,
+          "original_ci_low_ns": 47.7514327577885,
+          "original_ci_high_ns": 47.813421923790784,
+          "modified_ci_low_ns": 47.33589567815886,
+          "modified_ci_high_ns": 47.386510930596295
+        },
+        {
+          "pair": 2,
+          "order": "BA",
+          "original_ns": 47.43243802851729,
+          "modified_ns": 47.374456978961206,
+          "delta_percent": -0.12223923535455983,
+          "original_ci_low_ns": 47.40907535627539,
+          "original_ci_high_ns": 47.45826343977269,
+          "modified_ci_low_ns": 47.347579746324094,
+          "modified_ci_high_ns": 47.40313767966975
+        },
+        {
+          "pair": 3,
+          "order": "AB",
+          "original_ns": 47.42548127467316,
+          "modified_ns": 47.463788518994754,
+          "delta_percent": 0.08077354892770394,
+          "original_ci_low_ns": 47.40041907042976,
+          "original_ci_high_ns": 47.45343555040085,
+          "modified_ci_low_ns": 47.4008090386982,
+          "modified_ci_high_ns": 47.53982628084681
+        },
+        {
+          "pair": 4,
+          "order": "BA",
+          "original_ns": 47.49247429330903,
+          "modified_ns": 47.386826412543954,
+          "delta_percent": -0.22245183544787883,
+          "original_ci_low_ns": 47.46595263801028,
+          "original_ci_high_ns": 47.521319426844215,
+          "modified_ci_low_ns": 47.36210493873828,
+          "modified_ci_high_ns": 47.41425926349065
+        },
+        {
+          "pair": 5,
+          "order": "AB",
+          "original_ns": 47.43765618391652,
+          "modified_ns": 47.38255385993668,
+          "delta_percent": -0.11615734927167276,
+          "original_ci_low_ns": 47.41451335220692,
+          "original_ci_high_ns": 47.463159384665765,
+          "modified_ci_low_ns": 47.35910921449407,
+          "modified_ci_high_ns": 47.40837044310136
+        },
+        {
+          "pair": 6,
+          "order": "BA",
+          "original_ns": 47.49285394951352,
+          "modified_ns": 47.38900491392526,
+          "delta_percent": -0.21866244487781517,
+          "original_ci_low_ns": 47.46847309866465,
+          "original_ci_high_ns": 47.519215658227466,
+          "modified_ci_low_ns": 47.3633650172454,
+          "modified_ci_high_ns": 47.41697552191508
+        },
+        {
+          "pair": 7,
+          "order": "AB",
+          "original_ns": 47.437007320521495,
+          "modified_ns": 47.50490783581006,
+          "delta_percent": 0.14313827773699828,
+          "original_ci_low_ns": 47.41403182774611,
+          "original_ci_high_ns": 47.46176610108267,
+          "modified_ci_low_ns": 47.42521065582463,
+          "modified_ci_high_ns": 47.60310643946783
+        },
+        {
+          "pair": 8,
+          "order": "BA",
+          "original_ns": 47.43229650132922,
+          "modified_ns": 47.39362857381967,
+          "delta_percent": -0.0815223599988757,
+          "original_ci_low_ns": 47.40629680051232,
+          "original_ci_high_ns": 47.46134134788039,
+          "modified_ci_low_ns": 47.36740693551569,
+          "modified_ci_high_ns": 47.42355713659164
+        },
+        {
+          "pair": 9,
+          "order": "AB",
+          "original_ns": 47.446900011380066,
+          "modified_ns": 47.40613146688269,
+          "delta_percent": -0.08592456933455006,
+          "original_ci_low_ns": 47.41986642131755,
+          "original_ci_high_ns": 47.47720650615844,
+          "modified_ci_low_ns": 47.38211874401488,
+          "modified_ci_high_ns": 47.43136051254172
+        },
+        {
+          "pair": 10,
+          "order": "BA",
+          "original_ns": 47.44074190827565,
+          "modified_ns": 47.388809436552755,
+          "delta_percent": -0.10946808509719741,
+          "original_ci_low_ns": 47.41492241249558,
+          "original_ci_high_ns": 47.46885493304588,
+          "modified_ci_low_ns": 47.362046319851885,
+          "modified_ci_high_ns": 47.41913695293458
+        },
+        {
+          "pair": 11,
+          "order": "AB",
+          "original_ns": 47.558542884912974,
+          "modified_ns": 47.47522695511714,
+          "delta_percent": -0.17518604385642345,
+          "original_ci_low_ns": 47.5199704570869,
+          "original_ci_high_ns": 47.59831278268224,
+          "modified_ci_low_ns": 47.41422324998299,
+          "modified_ci_high_ns": 47.54871477010174
+        },
+        {
+          "pair": 12,
+          "order": "BA",
+          "original_ns": 47.447554517943026,
+          "modified_ns": 47.38349626483838,
+          "delta_percent": -0.13500854523581518,
+          "original_ci_low_ns": 47.42193624948144,
+          "original_ci_high_ns": 47.47646437274977,
+          "modified_ci_low_ns": 47.358796025519304,
+          "modified_ci_high_ns": 47.40989366878797
+        }
+      ],
+      "original_geomean95_ci_ns": [
+        47.443237964058476,
+        47.54849557647274
+      ],
+      "modified_geomean95_ci_ns": [
+        47.38637615855835,
+        47.4354759734128
+      ],
+      "holm_adjusted_p": 0.0546875,
+      "significant_family_0_05": false
+    },
+    {
+      "benchmark": "fine/pack/unpack_block_u8_neon",
+      "n_pairs": 12,
+      "original_geomean_ns": 48.13188620771,
+      "modified_geomean_ns": 48.123484697336046,
+      "original_mean_ns": 48.13195289721287,
+      "modified_mean_ns": 48.1237249095676,
+      "original_sd_ns": 0.08380462364244388,
+      "modified_sd_ns": 0.15887294714454567,
+      "original_cv_percent": 0.1741143223949608,
+      "modified_cv_percent": 0.3301343514931442,
+      "delta_percent": -0.017455186230744883,
+      "paired_bootstrap95_ci_percent": [
+        -0.2354238571429319,
+        0.1931407443339913
+      ],
+      "bonferroni_family95_ci_percent": [
+        -0.29283544209161594,
+        0.24800501978701112
+      ],
+      "exact_two_sided_signflip_p": 0.8818359375,
+      "modified_faster_pairs": 6,
+      "modified_slower_pairs": 6,
+      "per_pair_delta_sd_percentage_points": 0.3938530480689752,
+      "per_pair_delta_minmax_percent": [
+        -0.7763018341521155,
+        0.5655669471854585
+      ],
+      "order_delta_percent": {
+        "AB": -0.08036603455477691,
+        "BA": 0.0454952716743052
+      },
+      "half_delta_percent": {
+        "first": -0.07720797024730248,
+        "second": 0.04233332932538644
+      },
+      "pairs": [
+        {
+          "pair": 1,
+          "order": "AB",
+          "original_ns": 48.145390653185395,
+          "modified_ns": 48.18633079504165,
+          "delta_percent": 0.08503439540279434,
+          "original_ci_low_ns": 48.108294568461694,
+          "original_ci_high_ns": 48.18497311263371,
+          "modified_ci_low_ns": 48.102402475804354,
+          "modified_ci_high_ns": 48.281651463528185
+        },
+        {
+          "pair": 2,
+          "order": "BA",
+          "original_ns": 48.10637604275715,
+          "modified_ns": 48.3737925563854,
+          "delta_percent": 0.5558858006484924,
+          "original_ci_low_ns": 48.07415603767814,
+          "original_ci_high_ns": 48.14152235153329,
+          "modified_ci_low_ns": 48.26273095790595,
+          "modified_ci_high_ns": 48.49329403444521
+        },
+        {
+          "pair": 3,
+          "order": "AB",
+          "original_ns": 48.09387920653464,
+          "modified_ns": 47.89421615249521,
+          "delta_percent": -0.41515273322410007,
+          "original_ci_low_ns": 48.06303739117547,
+          "original_ci_high_ns": 48.12708243436006,
+          "modified_ci_low_ns": 47.851330554393805,
+          "modified_ci_high_ns": 47.94005463450256
+        },
+        {
+          "pair": 4,
+          "order": "BA",
+          "original_ns": 48.3863133169918,
+          "modified_ns": 48.010689479233406,
+          "delta_percent": -0.7763018341521155,
+          "original_ci_low_ns": 48.26482452193027,
+          "original_ci_high_ns": 48.52274590931327,
+          "modified_ci_low_ns": 47.97227947515955,
+          "modified_ci_high_ns": 48.05204228810774
+        },
+        {
+          "pair": 5,
+          "order": "AB",
+          "original_ns": 48.094670192196396,
+          "modified_ns": 48.04733877935874,
+          "delta_percent": -0.09841301052384566,
+          "original_ci_low_ns": 48.061965437621915,
+          "original_ci_high_ns": 48.13051454691963,
+          "modified_ci_low_ns": 48.00264184358165,
+          "modified_ci_high_ns": 48.09626379806971
+        },
+        {
+          "pair": 6,
+          "order": "BA",
+          "original_ns": 48.09173360411825,
+          "modified_ns": 48.18369472461865,
+          "delta_percent": 0.19122022353654788,
+          "original_ci_low_ns": 48.06420704010961,
+          "original_ci_high_ns": 48.12093826769797,
+          "modified_ci_low_ns": 48.07909977458924,
+          "modified_ci_high_ns": 48.29906925914067
+        },
+        {
+          "pair": 7,
+          "order": "AB",
+          "original_ns": 48.11306416071006,
+          "modified_ns": 48.186937141911976,
+          "delta_percent": 0.15354037929316,
+          "original_ci_low_ns": 48.078413716907185,
+          "original_ci_high_ns": 48.15310368476756,
+          "modified_ci_low_ns": 48.138117015727516,
+          "modified_ci_high_ns": 48.23814881195636
+        },
+        {
+          "pair": 8,
+          "order": "BA",
+          "original_ns": 48.10358134086225,
+          "modified_ns": 48.001923554217434,
+          "delta_percent": -0.2113310148873726,
+          "original_ci_low_ns": 48.0703115603313,
+          "original_ci_high_ns": 48.13965746638563,
+          "modified_ci_low_ns": 47.96102047951601,
+          "modified_ci_high_ns": 48.04705853549823
+        },
+        {
+          "pair": 9,
+          "order": "AB",
+          "original_ns": 48.13170347850617,
+          "modified_ns": 48.21879714386947,
+          "delta_percent": 0.18094864521509546,
+          "original_ci_low_ns": 48.082754975197254,
+          "original_ci_high_ns": 48.19312397857156,
+          "modified_ci_low_ns": 48.1701836727554,
+          "modified_ci_high_ns": 48.26836366431876
+        },
+        {
+          "pair": 10,
+          "order": "BA",
+          "original_ns": 48.119879761927265,
+          "modified_ns": 48.39202989688611,
+          "delta_percent": 0.5655669471854585,
+          "original_ci_low_ns": 48.08124344968044,
+          "original_ci_high_ns": 48.165175731697346,
+          "modified_ci_low_ns": 48.30344119112645,
+          "modified_ci_high_ns": 48.491647682833104
+        },
+        {
+          "pair": 11,
+          "order": "AB",
+          "original_ns": 48.14147922098803,
+          "modified_ns": 47.95547527494124,
+          "delta_percent": -0.3863694033848786,
+          "original_ci_low_ns": 48.087941188808834,
+          "original_ci_high_ns": 48.20740534494012,
+          "modified_ci_low_ns": 47.924095191082486,
+          "modified_ci_high_ns": 47.99150961144771
+        },
+        {
+          "pair": 12,
+          "order": "BA",
+          "original_ns": 48.05536378777703,
+          "modified_ns": 48.033473415851866,
+          "delta_percent": -0.045552400813864136,
+          "original_ci_low_ns": 48.028952166243876,
+          "original_ci_high_ns": 48.08431294256139,
+          "modified_ci_low_ns": 47.992715896063466,
+          "modified_ci_high_ns": 48.07685532394121
+        }
+      ],
+      "original_geomean95_ci_ns": [
+        48.098237661268065,
+        48.183551484483154
+      ],
+      "modified_geomean95_ci_ns": [
+        48.03961739122807,
+        48.212484298408896
+      ],
+      "holm_adjusted_p": 1,
+      "significant_family_0_05": false
+    },
+    {
+      "benchmark": "fine/fill/opaque_short_u8_neon",
+      "n_pairs": 12,
+      "original_geomean_ns": 6.957458506108538,
+      "modified_geomean_ns": 6.950371887163194,
+      "original_mean_ns": 6.957572885290241,
+      "modified_mean_ns": 6.950671732153548,
+      "original_sd_ns": 0.041467325812335636,
+      "modified_sd_ns": 0.0672053243842221,
+      "original_cv_percent": 0.5960027511893724,
+      "modified_cv_percent": 0.9668896327434479,
+      "delta_percent": -0.10185643132650474,
+      "paired_bootstrap95_ci_percent": [
+        -0.5047343697599438,
+        0.2813348197300127
+      ],
+      "bonferroni_family95_ci_percent": [
+        -0.6156836824635809,
+        0.3809968926200077
+      ],
+      "exact_two_sided_signflip_p": 0.63818359375,
+      "modified_faster_pairs": 6,
+      "modified_slower_pairs": 6,
+      "per_pair_delta_sd_percentage_points": 0.7277285869440301,
+      "per_pair_delta_minmax_percent": [
+        -1.4638120828210477,
+        0.8599084597384232
+      ],
+      "order_delta_percent": {
+        "AB": 0.0018927373828745771,
+        "BA": -0.20549796317308835
+      },
+      "half_delta_percent": {
+        "first": -0.16678528733323206,
+        "second": -0.036885347326273694
+      },
+      "pairs": [
+        {
+          "pair": 1,
+          "order": "AB",
+          "original_ns": 6.832060467399198,
+          "modified_ns": 6.796567601345512,
+          "delta_percent": -0.5195045656145592,
+          "original_ci_low_ns": 6.823915719025389,
+          "original_ci_high_ns": 6.84019219933694,
+          "modified_ci_low_ns": 6.775849634506047,
+          "modified_ci_high_ns": 6.818791933204625
+        },
+        {
+          "pair": 2,
+          "order": "BA",
+          "original_ns": 6.962151437067395,
+          "modified_ns": 6.904595263775659,
+          "delta_percent": -0.8267009675385628,
+          "original_ci_low_ns": 6.95697943194115,
+          "original_ci_high_ns": 6.967429827797887,
+          "modified_ci_low_ns": 6.889576819901791,
+          "modified_ci_high_ns": 6.91959057959252
+        },
+        {
+          "pair": 3,
+          "order": "AB",
+          "original_ns": 6.949912623457133,
+          "modified_ns": 7.0037036624921285,
+          "delta_percent": 0.7739815152990825,
+          "original_ci_low_ns": 6.944691330797807,
+          "original_ci_high_ns": 6.955264209051477,
+          "modified_ci_low_ns": 6.991976054513975,
+          "modified_ci_high_ns": 7.014116468696925
+        },
+        {
+          "pair": 4,
+          "order": "BA",
+          "original_ns": 6.961314205063701,
+          "modified_ns": 6.988208117321448,
+          "delta_percent": 0.38633383676582866,
+          "original_ci_low_ns": 6.9567068505518295,
+          "original_ci_high_ns": 6.966177056267825,
+          "modified_ci_low_ns": 6.975226952924785,
+          "modified_ci_high_ns": 7.000501435286139
+        },
+        {
+          "pair": 5,
+          "order": "AB",
+          "original_ns": 6.969154009840684,
+          "modified_ns": 7.015827944483202,
+          "delta_percent": 0.6697216703291708,
+          "original_ci_low_ns": 6.965339278582755,
+          "original_ci_high_ns": 6.973070623880166,
+          "modified_ci_low_ns": 6.985288317622855,
+          "modified_ci_high_ns": 7.060631241417819
+        },
+        {
+          "pair": 6,
+          "order": "BA",
+          "original_ns": 6.971884737452866,
+          "modified_ns": 6.869829446265674,
+          "delta_percent": -1.4638120828210477,
+          "original_ci_low_ns": 6.967490819816643,
+          "original_ci_high_ns": 6.976544248404953,
+          "modified_ci_low_ns": 6.854260676563195,
+          "modified_ci_high_ns": 6.884989557170883
+        },
+        {
+          "pair": 7,
+          "order": "AB",
+          "original_ns": 6.972906504313516,
+          "modified_ns": 6.9135185384790665,
+          "delta_percent": -0.851696000766855,
+          "original_ci_low_ns": 6.968079644943797,
+          "original_ci_high_ns": 6.977864273605812,
+          "modified_ci_low_ns": 6.898953352773919,
+          "modified_ci_high_ns": 6.928187250765576
+        },
+        {
+          "pair": 8,
+          "order": "BA",
+          "original_ns": 6.986387490004156,
+          "modified_ns": 6.9656307509964615,
+          "delta_percent": -0.29710260184383497,
+          "original_ci_low_ns": 6.9823696291942525,
+          "original_ci_high_ns": 6.990632314526056,
+          "modified_ci_low_ns": 6.95149339423636,
+          "modified_ci_high_ns": 6.979306068168135
+        },
+        {
+          "pair": 9,
+          "order": "AB",
+          "original_ns": 6.986770780812599,
+          "modified_ns": 6.97095627990968,
+          "delta_percent": -0.22634921624092863,
+          "original_ci_low_ns": 6.980971894826809,
+          "original_ci_high_ns": 6.992997342753659,
+          "modified_ci_low_ns": 6.962173581328753,
+          "modified_ci_high_ns": 6.979320937596673
+        },
+        {
+          "pair": 10,
+          "order": "BA",
+          "original_ns": 6.955630357160781,
+          "modified_ns": 6.964416359179181,
+          "delta_percent": 0.1263149645287509,
+          "original_ci_low_ns": 6.948196988834629,
+          "original_ci_high_ns": 6.9642221173272185,
+          "modified_ci_low_ns": 6.947817593031526,
+          "modified_ci_high_ns": 6.980581738188781
+        },
+        {
+          "pair": 11,
+          "order": "AB",
+          "original_ns": 6.985973015571527,
+          "modified_ns": 6.998256325103237,
+          "delta_percent": 0.17582818462555938,
+          "original_ci_low_ns": 6.981248825013095,
+          "original_ci_high_ns": 6.991066735997896,
+          "modified_ci_low_ns": 6.986699039331609,
+          "modified_ci_high_ns": 7.0084749637814845
+        },
+        {
+          "pair": 12,
+          "order": "BA",
+          "original_ns": 6.956728995339336,
+          "modified_ns": 7.016550496491336,
+          "delta_percent": 0.8599084597384232,
+          "original_ci_low_ns": 6.95329481743335,
+          "original_ci_high_ns": 6.960437792775131,
+          "modified_ci_low_ns": 7.007383785726482,
+          "modified_ci_high_ns": 7.025473445792054
+        }
+      ],
+      "original_geomean95_ci_ns": [
+        6.931598534243643,
+        6.974324042974176
+      ],
+      "modified_geomean95_ci_ns": [
+        6.911033429579335,
+        6.98390735608739
+      ],
+      "holm_adjusted_p": 1,
+      "significant_family_0_05": false
+    },
+    {
+      "benchmark": "fine/fill/opaque_long_u8_neon",
+      "n_pairs": 12,
+      "original_geomean_ns": 34.055860645548165,
+      "modified_geomean_ns": 34.02767474594484,
+      "original_mean_ns": 34.05738160278034,
+      "modified_mean_ns": 34.028865933963786,
+      "original_sd_ns": 0.3346100683211504,
+      "modified_sd_ns": 0.2965599168203786,
+      "original_cv_percent": 0.9824891185816641,
+      "modified_cv_percent": 0.8714951517804942,
+      "delta_percent": -0.0827637272089058,
+      "paired_bootstrap95_ci_percent": [
+        -0.46011278889898505,
+        0.2666211365317543
+      ],
+      "bonferroni_family95_ci_percent": [
+        -0.5669113247703149,
+        0.34695432377774904
+      ],
+      "exact_two_sided_signflip_p": 0.67431640625,
+      "modified_faster_pairs": 4,
+      "modified_slower_pairs": 8,
+      "per_pair_delta_sd_percentage_points": 0.6730790346102469,
+      "per_pair_delta_minmax_percent": [
+        -1.1566397376018833,
+        0.8419976807165108
+      ],
+      "order_delta_percent": {
+        "AB": 0.28570405174951946,
+        "BA": -0.4498776890364218
+      },
+      "half_delta_percent": {
+        "first": -0.14487618528500334,
+        "second": -0.020612633584617335
+      },
+      "pairs": [
+        {
+          "pair": 1,
+          "order": "AB",
+          "original_ns": 33.18312828794256,
+          "modified_ns": 33.31204052892431,
+          "delta_percent": 0.38848730554614797,
+          "original_ci_low_ns": 33.06484623621708,
+          "original_ci_high_ns": 33.31868423115612,
+          "modified_ci_low_ns": 33.24279687084848,
+          "modified_ci_high_ns": 33.38240812176824
+        },
+        {
+          "pair": 2,
+          "order": "BA",
+          "original_ns": 33.825483562462146,
+          "modified_ns": 33.912800920391206,
+          "delta_percent": 0.2581407528670532,
+          "original_ci_low_ns": 33.73889102865551,
+          "original_ci_high_ns": 33.915258026375234,
+          "modified_ci_low_ns": 33.777776391983096,
+          "modified_ci_high_ns": 34.06852884692261
+        },
+        {
+          "pair": 3,
+          "order": "AB",
+          "original_ns": 33.82917680392821,
+          "modified_ns": 33.86279197413237,
+          "delta_percent": 0.09936739045999232,
+          "original_ci_low_ns": 33.73224458277481,
+          "original_ci_high_ns": 33.933398966177116,
+          "modified_ci_low_ns": 33.797161236334674,
+          "modified_ci_high_ns": 33.931889750143824
+        },
+        {
+          "pair": 4,
+          "order": "BA",
+          "original_ns": 34.24485953436876,
+          "modified_ns": 33.87066572041277,
+          "delta_percent": -1.0927006828001185,
+          "original_ci_low_ns": 34.07891177173862,
+          "original_ci_high_ns": 34.43859881681077,
+          "modified_ci_low_ns": 33.81891167420924,
+          "modified_ci_high_ns": 33.9233472919098
+        },
+        {
+          "pair": 5,
+          "order": "AB",
+          "original_ns": 34.055557004212965,
+          "modified_ns": 34.22828970234113,
+          "delta_percent": 0.5072085536783177,
+          "original_ci_low_ns": 34.00207748160257,
+          "original_ci_high_ns": 34.107281389894645,
+          "modified_ci_low_ns": 34.11084193354568,
+          "modified_ci_high_ns": 34.35290007947972
+        },
+        {
+          "pair": 6,
+          "order": "BA",
+          "original_ns": 34.2077850370652,
+          "modified_ns": 33.85997531669998,
+          "delta_percent": -1.0167560395633823,
+          "original_ci_low_ns": 34.12257143696952,
+          "original_ci_high_ns": 34.30454231165259,
+          "modified_ci_low_ns": 33.80033290165924,
+          "modified_ci_high_ns": 33.91900257954787
+        },
+        {
+          "pair": 7,
+          "order": "AB",
+          "original_ns": 34.21220140408496,
+          "modified_ns": 34.07583417382193,
+          "delta_percent": -0.39859238712053324,
+          "original_ci_low_ns": 34.11400866271039,
+          "original_ci_high_ns": 34.315049677014215,
+          "modified_ci_low_ns": 33.9734171504096,
+          "modified_ci_high_ns": 34.182237867784785
+        },
+        {
+          "pair": 8,
+          "order": "BA",
+          "original_ns": 34.040778811301045,
+          "modified_ns": 34.12322892334791,
+          "delta_percent": 0.24220982869960217,
+          "original_ci_low_ns": 33.96747255709191,
+          "original_ci_high_ns": 34.11707091350422,
+          "modified_ci_low_ns": 34.066015013557454,
+          "modified_ci_high_ns": 34.17864259960091
+        },
+        {
+          "pair": 9,
+          "order": "AB",
+          "original_ns": 34.3279773988221,
+          "modified_ns": 34.42413304456443,
+          "delta_percent": 0.2801086840194422,
+          "original_ci_low_ns": 34.206160067278056,
+          "original_ci_high_ns": 34.455584034454155,
+          "modified_ci_low_ns": 34.313521634028035,
+          "modified_ci_high_ns": 34.54367030952093
+        },
+        {
+          "pair": 10,
+          "order": "BA",
+          "original_ns": 34.478345104187746,
+          "modified_ns": 34.079554863845196,
+          "delta_percent": -1.1566397376018833,
+          "original_ci_low_ns": 34.361983788598344,
+          "original_ci_high_ns": 34.60621105530287,
+          "modified_ci_low_ns": 34.01362298995614,
+          "modified_ci_high_ns": 34.14950562865496
+        },
+        {
+          "pair": 11,
+          "order": "AB",
+          "original_ns": 34.055677460060465,
+          "modified_ns": 34.34242547442647,
+          "delta_percent": 0.8419976807165108,
+          "original_ci_low_ns": 33.99419296399937,
+          "original_ci_high_ns": 34.11823680401587,
+          "modified_ci_low_ns": 34.22651100330167,
+          "modified_ci_high_ns": 34.47181003824018
+        },
+        {
+          "pair": 12,
+          "order": "BA",
+          "original_ns": 34.22760882492789,
+          "modified_ns": 34.254650564657716,
+          "delta_percent": 0.07900563509457559,
+          "original_ci_low_ns": 34.15574206696301,
+          "original_ci_high_ns": 34.29948297670312,
+          "modified_ci_low_ns": 34.197230132868185,
+          "modified_ci_high_ns": 34.3156097022938
+        }
+      ],
+      "original_geomean95_ci_ns": [
+        33.85428463121245,
+        34.21602617610127
+      ],
+      "modified_geomean95_ci_ns": [
+        33.85468470674106,
+        34.17712973263657
+      ],
+      "holm_adjusted_p": 1,
+      "significant_family_0_05": false
+    }
+  ]
+}

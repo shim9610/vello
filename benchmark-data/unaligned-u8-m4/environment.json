@@ -1,0 +1,24 @@
+{
+  "measurement_start_kst": "2026-11-17T01:23:44+09:00",
+  "measurement_end_kst": "2026-11-17T01:47:35+09:00",
+  "model": "Mac mini / Mac16,10",
+  "chip": "Apple M4",
+  "cpu_cores": 10,
+  "memory_bytes": 17179869184,
+  "os": "ProductName:\t\tmacOS\nProductVersion:\t\t27.2\nBuildVersion:\t\t26B123\n",
+  "architecture": "arm64",
+  "sysctl_proc_translated": 0,
+  "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)\nbinary: rustc\ncommit-hash: 58cf8f9c35b355199727627d07ae34a4e2846d67\ncommit-date: 2026-10-13\nhost: aarch64-apple-darwin\nrelease: 1.99.1\nLLVM version: 23.1.1\n",
+  "power": "Now drawing from 'AC Power'",
+  "low_power_mode": 0,
+  "build": "CARGO_BUILD_JOBS=3, separate CARGO_TARGET_DIR; build.py clears compiler/flags/target/opt-level overrides; no extra rustflags or target-cpu=native",
+  "frequency_and_core_affinity_controlled": false,
+  "thermal_counts": {
+    "0": 299
+  },
+  "original_upload_sha256": {
+    "report_md": "7d389b15472251f6b639d1f6e1620561ad445ae13116459ebe5ffadbae2c8d10",
+    "tar_gz": "54a4cbf9ceda37197b5ff4d0b941ff7318cb4e8b1e8aa1960411a53edb8621e7"
+  },
+  "publication_scope": "Selected measurement data. Home/project paths normalized; process lists, cleanup history, and unrelated machine context are not included. Criterion numerical files are unchanged."
+}
