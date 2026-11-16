@@ -1,0 +1,29 @@
+--- a/src/fine/lowp/mod.rs
++++ b/src/fine/lowp/mod.rs
+@@ -24 +24 @@
+-use bytemuck::{cast_slice, cast_slice_mut};
++use bytemuck::{cast_slice, pod_read_unaligned};
+@@ -73,2 +73,3 @@
+-        let target: &mut [u32] = cast_slice_mut(dest);
+-        target.fill(u32::from_ne_bytes(src));
++        let (pixels, remainder) = dest.as_chunks_mut::<4>();
++        assert!(remainder.is_empty(), "RGBA buffer length must be divisible by four");
++        pixels.fill(src);
+@@ -340 +341 @@
+-        let casted: &[u32; 16] = cast_slice::<u8, u32>(col).try_into().unwrap();
++        let casted = pod_read_unaligned::<[u32; 16]>(col);
+@@ -343 +344 @@
+-            .load_four_interleaved_u32x4(casted)
++            .load_four_interleaved_u32x4(&casted)
+@@ -403,2 +404,2 @@
+-    let scratch: &mut [f32] = cast_slice_mut(&mut scratch[..width * TILE_HEIGHT_COMPONENTS]);
+-    const CHUNK_LENGTH: usize = 16;
++    let scratch = &mut scratch[..width * TILE_HEIGHT_COMPONENTS];
++    const CHUNK_LENGTH: usize = 64;
+@@ -426 +427,5 @@
+-        simd.store_four_interleaved_f32x4([r0, r1, r2, r3], col);
++        let mut packed = [0.0_f32; 16];
++        simd.store_four_interleaved_f32x4([r0, r1, r2, r3], &mut packed);
++        for (dest, value) in col.as_chunks_mut::<4>().0.iter_mut().zip(packed) {
++            *dest = value.to_ne_bytes();
++        }

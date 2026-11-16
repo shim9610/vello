@@ -1,0 +1,119 @@
+[
+  {
+    "width": 16,
+    "height": 4,
+    "rounds": 120,
+    "median_ns": {
+      "original": 6.555913961246155,
+      "loop": 12.28451489597806,
+      "bytes": 7.152148467579495
+    },
+    "comparisons": [
+      {
+        "variant": "loop",
+        "baseline": "original",
+        "change_percent": 71.3845849924096,
+        "ci95_percent": [
+          62.79623889915796,
+          79.97014543282575
+        ]
+      },
+      {
+        "variant": "bytes",
+        "baseline": "original",
+        "change_percent": 4.422938270722766,
+        "ci95_percent": [
+          -1.8882040504596398,
+          11.045537925148887
+        ]
+      },
+      {
+        "variant": "bytes",
+        "baseline": "loop",
+        "change_percent": -39.070985715927996,
+        "ci95_percent": [
+          -41.01369445551586,
+          -36.91277371149976
+        ]
+      }
+    ]
+  },
+  {
+    "width": 64,
+    "height": 4,
+    "rounds": 120,
+    "median_ns": {
+      "original": 17.850901418422023,
+      "loop": 29.309222102197232,
+      "bytes": 16.370573714790485
+    },
+    "comparisons": [
+      {
+        "variant": "loop",
+        "baseline": "original",
+        "change_percent": 59.78532107869303,
+        "ci95_percent": [
+          56.75671812807486,
+          62.62440672211129
+        ]
+      },
+      {
+        "variant": "bytes",
+        "baseline": "original",
+        "change_percent": -9.678175020878276,
+        "ci95_percent": [
+          -12.153821166705635,
+          -7.254806552565804
+        ]
+      },
+      {
+        "variant": "bytes",
+        "baseline": "loop",
+        "change_percent": -43.473014686600074,
+        "ci95_percent": [
+          -44.58609679881671,
+          -42.37872145537816
+        ]
+      }
+    ]
+  },
+  {
+    "width": 256,
+    "height": 4,
+    "rounds": 120,
+    "median_ns": {
+      "original": 53.54112067671928,
+      "loop": 118.10569376637969,
+      "bytes": 58.881532540710054
+    },
+    "comparisons": [
+      {
+        "variant": "loop",
+        "baseline": "original",
+        "change_percent": 119.87092288009723,
+        "ci95_percent": [
+          114.71942175751913,
+          124.90789855755024
+        ]
+      },
+      {
+        "variant": "bytes",
+        "baseline": "original",
+        "change_percent": 10.431741173024072,
+        "ci95_percent": [
+          7.256734328871861,
+          13.632243239752137
+        ]
+      },
+      {
+        "variant": "bytes",
+        "baseline": "loop",
+        "change_percent": -49.774285873514025,
+        "ci95_percent": [
+          -51.108419727562335,
+          -48.409948769171066
+        ]
+      }
+    ]
+  }
+]

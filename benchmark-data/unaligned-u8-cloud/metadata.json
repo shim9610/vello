@@ -1,0 +1,24 @@
+{
+  "rounds": 120,
+  "widths": [
+    16,
+    64,
+    256
+  ],
+  "height": 4,
+  "iterations_per_batch": {
+    "16": 15772009,
+    "64": 4048231,
+    "256": 1719354
+  },
+  "cpu": 0,
+  "scope": "unpack only; preallocated source/target; hot cache; one warmup then one measured batch; SIMD level detected once; exact output equality checked after each batch",
+  "order": "all six variant permutations cycled; rotating width order",
+  "interval": "95% circular moving-block bootstrap; six consecutive rounds per block; 5000 resamples",
+  "binary_sha256": {
+    "original": "1eed796783a9228669e24030f4d2ecc9b0a8745e6cbaf21f1003d8093a3c7d09",
+    "loop": "aeefb4828c295ffd97987ce13b5f6de51bf3c89d5b633b64e63562b4fdacf2ea",
+    "bytes": "060f59849712d827701c00400ed7031aa0fcf6579078b8ac890298f818c8ed45"
+  },
+  "elapsed_seconds": 282.0235609359952
+}

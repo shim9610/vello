@@ -1,0 +1,10 @@
+[package]
+name = "unpack-bench-loop"
+version = "0.0.0"
+edition = "2024"
+[dependencies]
+vello_cpu = { version = "=0.4.0", default-features = false, features = ["std", "u8_pipeline"] }
+vello_common = { version = "=0.4.0", default-features = false, features = ["std"] }
+
+[patch.crates-io]
+vello_cpu = { path = "../vello_cpu-0.4.0-before-bytes-of" }
