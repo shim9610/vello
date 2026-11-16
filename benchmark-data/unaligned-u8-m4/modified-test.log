@@ -189,4 +189,3 @@ test render::tests::multithreaded_crash_after_reset ... ok
 test render::tests::multithreaded_drop_with_pending_tasks ... ok
 
 test result: ok. 103 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
-
