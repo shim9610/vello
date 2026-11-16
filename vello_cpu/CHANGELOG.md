@@ -20,6 +20,10 @@ This release has an [MSRV][] of 1.89.
 
 - Breaking change: `RenderContext::reset_and_resize` and `RenderContext::reset_and_shrink` have been removed in favor of `RenderContext::reset_with`. (by [@LaurenzV][])
 
+### Fixed
+
+- Alignment-dependent panics when filling, packing, or unpacking u8 scratch buffers.
+
 ## [0.4.0][] - 2026-11-11
 
 This release has an [MSRV][] of 1.89.
